@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OreSolve</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./source/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./media.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <h1 class="hoverElements">OreSolve</h1>
+        <ul id="navul">
+            <li><a class="hoverElements" onclick="handleNavul()" href="#home">Home</a></li>
+            <li><a class="hoverElements" onclick="handleNavul()" href="#about">About</a></li>
+            <li><a class="hoverElements" onclick="handleNavul()" href="#services">Services</a></li>
+            <li><a class="hoverElements" onclick="handleNavul()" href="#team">Team</a></li>
+            <span class="material-symbols-outlined" id="closeMenu">
+                close
+            </span>
+        </ul>
+        <div id="humburger" class="hoverElements">
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- ------------------ Home  -->
+    <section id="home" class="header">
+        <div class="parallaxDiv revealElements">
+            <!-- <img src="./assets/home_4.png" alt="Parallax" class="ParallaxImgs">
+            <img src="./assets/home_3.png" alt="Parallax" class="ParallaxImgs">
+            <img src="./assets/home_2.png" alt="Parallax" class="ParallaxImgs">
+            <img src="./assets/home_1.png" alt="Parallax" class="ParallaxImgs"> -->
+        </div>
+        <div class="header_txt">
+            <h1 id="heroHead" class="revealElements">Everything you need to start and run your Business</h1>
+        </div>
+        <div class="header_txt absoluteHero">
+            <div>
+                <h1 id="nextHero"> </h1>
+            </div>
+            <div class="absoluteTxt revealElements">
+                <h2>The ideas that improve your product</h2>
+                <p>Be among the first founders to experience the easiest way to start & run a business.</p>
+            </div>
+        </div>
+        <a href="#about" id="ScrollMeDown" class="hoverElements">
+            <span class="material-symbols-outlined">
+                south
+            </span>
+        </a>
+    </section>
+
+    <section class="neonContainer">
+        <div class="neon_div hoverElements revealElements" style="--color:#574f45;">
+            <h1>Project Management</h1>
+            <span class="material-symbols-outlined">
+                north_east
+            </span>
+        </div>
+        <div class="neon_div hoverElements revealElements" style="--color:#f5c227;">
+            <h1>Financial Advisory</h1>
+            <span class="material-symbols-outlined">
+                north_east
+            </span>
+        </div>
+        <div class="neon_div hoverElements revealElements" style="--color:#6b8a13;">
+            <h1>Software Solution</h1>
+            <span class="material-symbols-outlined">
+                north_east
+            </span>
+        </div>
+        <div class="neon_div hoverElements revealElements" style="--color:#574f45;">
+            <h1>Operational Support</h1>
+            <span class="material-symbols-outlined">
+                north_east
+            </span>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="aboutBox about_txt revealElements">
+            <h1>Empowering Your Vision to Achieve Business <span style="color: #f5c227;">Excellence</span></h1>
+            <p id="about_p"></p>
+        </div>
+        <div class="aboutBox about_txt revealElements">
+            <h3>What we offer to Empower Your Business?</h3>
+            <ul>
+                <li class="revealElements">
+                    <span class="material-symbols-outlined">
+                        north_east
+                    </span> Expert Guidance
+                </li>
+                <li class="revealElements">
+                    <span class="material-symbols-outlined">
+                        north_east
+                    </span> Business Analyst
+                </li>
+                <li class="revealElements">
+                    <span class="material-symbols-outlined">
+                        north_east
+                    </span> Innovative Solutions
+                </li>
+            </ul>
+        </div>
+        <div class="aboutBox aboutImgBox hoverElements revealElements">
+            <object data="./assets/Graph-Anim.svg" type="image/svg+xml" id="animatedGraph"></object>
+        </div>
+    </section>
+
+    <section id="services">
+        <h1 class="revealElements">Our Services</h1>
+        <div class="serviceContainer">
+            <div class="serviceBox revealElements">
+                <div>
+                    <h2>Product Development</h2>
+                    <p>Create a Minimum Viable Product (MVP) to quickly test market viability. Conduct (UX) design to
+                        ensure the product meets customer needs.</p>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined serviceBtn">
+                        inventory_2
+                    </span>
+                    <button>
+                        Explore More <span class="material-symbols-outlined">
+                            trending_up
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="serviceBox revealElements">
+                <div>
+                    <h2>Funding & Investment</h2>
+                    <p>Secure venture capital and angel investments with compelling pitch decks to fuel and sustain
+                        business growth.</p>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined serviceBtn">
+                        payments
+                    </span>
+                    <button>
+                        Explore More <span class="material-symbols-outlined">
+                            trending_up
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <!-- <div class="serviceBox revealElements">
+                <div>
+                    <h2>Digital Transformation</h2>
+                    <p>Seamlessly integrate advanced technology into business operations and implement robust e-commerce
+                        solutions to reach a broader audience.</p>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined serviceBtn">
+                        memory
+                    </span>
+                    <button>
+                        Explore More <span class="material-symbols-outlined">
+                            trending_up
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="serviceBox revealElements">
+                <div>
+                    <h2>Customer Experience</h2>
+                    <p>Map out the customer journey to enhance user satisfaction at every touchpoint. Design intuitive
+                        user interfaces (UI) to provide a seamless experience.</p>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined serviceBtn">
+                        chat
+                    </span>
+                    <button>
+                        Explore More <span class="material-symbols-outlined">
+                            trending_up
+                        </span>
+                    </button>
+                </div>
+            </div> -->
+            <div class="serviceBox revealElements">
+                <div>
+                    <h2>Compliance & Risk Management</h2>
+                    <p>Ensure regulatory compliance across all operations, proactively assessing and mitigating
+                        potential risks to safeguard the business.</p>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined serviceBtn">
+                        lock
+                    </span>
+                    <button>
+                        Explore More <span class="material-symbols-outlined">
+                            trending_up
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="serviceBox revealElements">
+                <div>
+                    <h2>Global Expansion</h2>
+                    <p>Formulate strategic market entry plans for international expansion, ensuring cross-border
+                        compliance and effective localization for success.</p>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined serviceBtn">
+                        public
+                    </span>
+                    <button>
+                        Explore More <span class="material-symbols-outlined">
+                            trending_up
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="testimonials revealElements">
+        <h1>The OreSolve Team</h1>
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card hoverElements swiper-slide">
+                        <img src="./assets/quote.svg" alt="Quotes" class="quotesImg">
+                        <div class="image-content">
+                            <div class="card-image">
+                                <img src="./assets/portrait1.jpg" alt="Portrait" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Oretu Kavari</h2>
+                            <span>Principal Consultant</span>
+                            <p class="description">Oretu has managed projects and systems implementations in the corporate and public health sectors</p>
+                            <button>View More</button>
+                        </div>
+                    </div>
+                    <div class="card hoverElements swiper-slide">
+                        <img src="./assets/quote.svg" alt="Quotes" class="quotesImg">
+                        <div class="image-content">
+                            <div class="card-image">
+                                <img src="./assets/portrait2.jpg" alt="Portrait" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Leilanie Chanberlain</h2>
+                            <span>Senior Financial Consultant</span>
+                            <p class="description">She has also worked closely with Leadership teams and has had responsibility for all areas related to finance and
+                            accounting, human resources, legal and administration.</p>
+                            <button>View More</button>
+                        </div>
+                    </div>
+                    <div class="card hoverElements swiper-slide">
+                        <img src="./assets/quote.svg" alt="Quotes" class="quotesImg">
+                        <div class="image-content">
+                            <div class="card-image">
+                                <img src="./assets/portrait5.jpg" alt="Portrait" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Elize Booys</h2>
+                            <span>Financial Consultant</span>
+                            <p class="description">Ms. Booys has a National Diploma in Management with Accounting as specialization and is currently pursuing an Advanced
+                            Diploma in Management - Accountancy with STADIO Namibia..</p>
+                            <button>View More</button>
+                        </div>
+                    </div>
+                    <div class="card hoverElements swiper-slide">
+                        <img src="./assets/quote.svg" alt="Quotes" class="quotesImg">
+                        <div class="image-content">
+                            <div class="card-image">
+                                <img src="./assets/portrait4.jpg" alt="Portrait" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Unore Karutjaiva</h2>
+                            <span>Business Devolpment Consultant</span>
+                            <p class="description">Unore holds a B.A. in Business Management from the Namibian University of Science and Technology and a Certificate in
+                            FinTech Security and Regulation (RegTech) from the Hong Kong University of Science and Technology as well as an
+                            International Diploma in Logistics (CILT - NUST).</p>
+                            <button>View More</button>
+                        </div>
+                    </div>
+                    <div class="card hoverElements swiper-slide">
+                        <img src="./assets/quote.svg" alt="Quotes" class="quotesImg">
+                        <div class="image-content">
+                            <div class="card-image">
+                                <img src="./assets/portrait5.jpg" alt="Portrait" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">Julia Nangombe</h2>
+                            <span>Senior Consultant</span>
+                            <p class="description">Dr Nangombe is a multi-skilled social scientist with a PhD in Public Health, a master’s degree in human resource
+                            planning and development and a Master of Business Administration</p>
+                            <button>View More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- <section id="contact">
+        <h1 class="revealElements">Contact Us</h1>
+        <p class="revealElements">We're here to help you with any questions or support you need. Reach out to us and we'll respond as soon as
+            possible.</p>
+        <div class="contactDiv revealElements">
+            <form id="contactForm">
+                <h2>Send Message</h2>
+                <div class="inputBox hoverElements">
+                    <input type="text" required name="user_name">
+                    <span>Your Name</span>
+                </div>
+                <div class="inputBox hoverElements">
+                    <input type="text" required name="user_email">
+                    <span>Email Address</span>
+                </div>
+                <div class="inputBox hoverElements">
+                    <textarea name="user_message" id="message"></textarea>
+                    <span>Your Message</span>
+                </div>
+                <input type="submit" class="hoverElements" value="Submit">
+            </form>
+        </div>
+    </section> -->
+
+    <section id="footer">
+        <ul>
+            <li><a class="hoverElements" href="#home">Home</a></li>
+            <li><a class="hoverElements" href="#about">About</a></li>
+            <li><a class="hoverElements" href="#services">Services</a></li>
+            <li><a class="hoverElements" href="#team">Team</a></li>
+        </ul>
+    </section>
+
+    <div class="cursor"></div>
+
+    <div class="alertBox" id="alertBox">
+        <p id="alertMessage"></p>
+    </div>
+    <script src="./source/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
