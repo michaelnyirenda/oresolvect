@@ -680,7 +680,7 @@ section{
 
 #contact form{
     position: relative;
-    background: repeating-conic-gradient(from var(--a), #1E90FF 0%, transparent 10%, transparent 50%);
+    background: repeating-conic-gradient(from var(--a), #f5c227 0%, transparent 10%, transparent 50%);
     animation: animateForm 6s linear infinite;
     display: flex;
     flex-direction: column;
@@ -711,7 +711,7 @@ section{
     position: absolute;
     inset: 2px;
     border: 2px solid var(--main-bg);
-    background: #222;
+    background: #dfddd3;
     z-index: -1;
 }
 
@@ -744,7 +744,7 @@ section{
     width: 100%;
     padding: 5px 0;
     border: none;
-    border-bottom: 2px solid #1E90FF;
+    border-bottom: 2px solid #574f45;
     background: transparent;
     outline: none;
     color: #fff;
@@ -760,7 +760,7 @@ section{
     left: 0;
     pointer-events: none;
     font-size: 1em;
-    color: rgba(255,255,255,.25);
+    color: rgb(255, 255, 255);
     transition: .5s;
     font-family: 'Poppins';
 }
@@ -769,7 +769,7 @@ section{
 .inputBox input:focus ~ span,
 .inputBox textarea:user-valid ~ span,
 .inputBox textarea:focus ~ span{
-    color: #f5c227;
+    color: #574f45;
     transform: translateY(-10px);
     font-size: 0.65em;
 }
