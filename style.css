@@ -22,7 +22,10 @@ html{
     box-sizing: border-box;
 }
 
+
+
 .material-symbols-outlined {
+    color: #fff;
   font-variation-settings:
   'FILL' 1,
   'wght' 400,
@@ -309,6 +312,7 @@ section{
 
 .neonContainer{
     margin: 20px auto;
+    color: #ffffff;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -325,19 +329,19 @@ section{
 }
 
 .neon_div:nth-child(1){
-    background: linear-gradient(0deg,var(--main-bg) 0%, #574f45 100%);
+    background: linear-gradient(0deg,var(--light-txt) 0%, #574f45 100%);
 }
 
 .neon_div:nth-child(2){
-    background: linear-gradient(0deg, var(--main-bg) 0%, #f5c227 100%);
+    background: linear-gradient(0deg, var(--light-txt) 0%, #f5c227 100%);
 }
 
 .neon_div:nth-child(3){
-    background: linear-gradient(0deg, var(--main-bg) 0%, #6d8a13 100%);
+    background: linear-gradient(0deg, var(--light-txt) 0%, #6d8a13 100%);
 }
 
 .neon_div:nth-child(4){
-    background: linear-gradient(0deg, var(--main-bg) 0%, #c3bea1 100%);
+    background: linear-gradient(0deg, var(--light-txt) 0%, #c3bea1 100%);
 }
 
 .neon_div span{
@@ -489,10 +493,11 @@ section{
 
 .serviceBox h2{
     font-weight: 500;
+    color: var(--secondary_txt);
 }
 
 .serviceBox p{
-    color: var(--light-txt);
+    color: var(--secondary_txt);
     margin: 8px 0;
     font-size: 13px;
 }
@@ -504,7 +509,7 @@ section{
 }
 
 .serviceBox .serviceBtn{
-    background: rgba(255,255,255,0.1);
+    background: rgb(255, 255, 255);
     padding: 7px;
     border-radius: 4px;
 }
@@ -526,19 +531,19 @@ section{
 }
 
 .serviceBox:nth-child(1){
-    background: linear-gradient(0deg,var(--main-bg) 0%, #f5c227 100%);
+    background: linear-gradient(0deg,var(--txt-color) 0%, #f5c227 100%);
 }
 
 .serviceBox:nth-child(2){
-    background: linear-gradient(0deg,var(--main-bg) 0%, #c3bea1 100%);
+    background: linear-gradient(0deg,var(--txt-color) 0%, #c3bea1 100%);
 }
 
 .serviceBox:nth-child(3){
-    background: linear-gradient(0deg,var(--main-bg) 0%, #6d8a13 100%);
+    background: linear-gradient(0deg,var(--txt-color) 0%, #6d8a13 100%);
 }
 
 .serviceBox:nth-child(4){
-    background: linear-gradient(0deg,var(--main-bg) 0%, #574f45 100%);
+    background: linear-gradient(0deg,var(--txt-color) 0%, #574f45 100%);
 }
 
 /* // For Btns */
@@ -585,7 +590,7 @@ section{
 }
 
 .card:hover{
-    background: linear-gradient(135deg,rgba(255,255,255,0.1), rgba(255,255,255,0));
+    background: linear-gradient(135deg,#dad6c4, rgba(14, 14, 14, 0));
 }
 
 .card .quotesImg{
@@ -626,7 +631,7 @@ section{
 }
 
 .card-content span{
-    color: #f5c227;
+    color: #574f45;
     font-size: 14px !important;
     margin-bottom: 15px;
 }

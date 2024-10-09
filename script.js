@@ -123,7 +123,7 @@ window.addEventListener('scroll', function() {
     if (aboutParaReveal < windowHeight - aboutParaRevealPoint) {
         if (!typed) {
             typed = true;
-            textTypingEffect(about_p,"Next's mission is to empower startups and entrepreneurs by providing them with the resources, support, and expertise they need to turn their visions into reality.")
+            textTypingEffect(about_p,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna lacus. Nam vitae augue vitae tellus tempor consequat vel vel nibh.")
         }
     }else{
         typed = false;
