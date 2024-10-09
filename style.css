@@ -329,19 +329,19 @@ section{
 }
 
 .neon_div:nth-child(1){
-    background: linear-gradient(0deg,var(--light-txt) 0%, #574f45 100%);
+    background: linear-gradient(0deg,var(--txt-color) 0%, #f5c227 100%);
 }
 
 .neon_div:nth-child(2){
-    background: linear-gradient(0deg, var(--light-txt) 0%, #f5c227 100%);
+    background: linear-gradient(0deg, var(--txt-color) 0%, #c3bea1 100%);
 }
 
 .neon_div:nth-child(3){
-    background: linear-gradient(0deg, var(--light-txt) 0%, #6d8a13 100%);
+    background: linear-gradient(0deg, var(--txt-color) 0%, #6d8a13 100%);
 }
 
 .neon_div:nth-child(4){
-    background: linear-gradient(0deg, var(--light-txt) 0%, #c3bea1 100%);
+    background: linear-gradient(0deg, var(--txt-color) 0%, #574f45 100%);
 }
 
 .neon_div span{
@@ -359,7 +359,7 @@ section{
     width: 20px;
     height: 20px;
     z-index: -1;
-    background: var(--color);
+    /* background: var(--color); */
     border-radius: 50%;
 }
 
@@ -590,7 +590,7 @@ section{
 }
 
 .card:hover{
-    background: linear-gradient(135deg,#dad6c4, rgba(14, 14, 14, 0));
+    background: linear-gradient(135deg,#fdd251, rgba(14, 14, 14, 0));
 }
 
 .card .quotesImg{
@@ -631,7 +631,7 @@ section{
 }
 
 .card-content span{
-    color: #574f45;
+    color: #6d8a13;
     font-size: 14px !important;
     margin-bottom: 15px;
 }
@@ -711,7 +711,7 @@ section{
     position: absolute;
     inset: 2px;
     border: 2px solid var(--main-bg);
-    background: #dfddd3;
+    background: #ffffff;
     z-index: -1;
 }
 
@@ -760,7 +760,7 @@ section{
     left: 0;
     pointer-events: none;
     font-size: 1em;
-    color: rgb(255, 255, 255);
+    color: #574f45;
     transition: .5s;
     font-family: 'Poppins';
 }
