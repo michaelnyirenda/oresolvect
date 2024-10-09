@@ -590,7 +590,7 @@ section{
 }
 
 .card:hover{
-    background: linear-gradient(135deg,#fdd251, rgba(14, 14, 14, 0));
+    background: linear-gradient(135deg,#e4de8e, rgba(14, 14, 14, 0));
 }
 
 .card .quotesImg{
