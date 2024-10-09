@@ -204,7 +204,7 @@ const contactForm = document.getElementById('contactForm');
 const sendEmail = (e)=>{
     e.preventDefault();
 
-    emailjs.sendForm('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID','#contactForm','YOUR_PUBLIC_ID')
+    emailjs.sendForm('service_q4xubng','template_wiveeyh','#contactForm')
     .then(()=>{
         throwAlert('Message Sent Successfully ✅')
         contactForm.reset();
