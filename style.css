@@ -25,13 +25,14 @@ html{
 
 
 .material-symbols-outlined {
-    color: #fff;
+    color: #ffffff;
   font-variation-settings:
   'FILL' 1,
   'wght' 400,
   'GRAD' 0,
   'opsz' 24
 }
+
 
 ::-webkit-scrollbar{
     width: 8px;
@@ -485,7 +486,7 @@ section{
 .serviceBox{
     padding: 20px;
     border-radius: 10px 50px 10px 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px #0000001a;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -552,7 +553,7 @@ section{
 }
 
 .serviceBox:nth-child(2) .serviceBtn{
-    background: rgba(172, 159, 115, 1);
+    background: #ac9f73;
 }
 
 .serviceBox:nth-child(3) .serviceBtn{
@@ -587,10 +588,13 @@ section{
     cursor: none;
     border-radius: 10px;
     position: relative;
-}
+    background: #ffffffde
+    }
+
 
 .card:hover{
-    background: linear-gradient(180deg, #574f45,#f5c227, #f7e5b2,#f7ecbb00);
+    transition: background 0.5s ease-in-out;
+    background: linear-gradient(180deg, #574f45,#ddc57c, #f0dfb3,#f7ecbb00);
 }
 
 .card .quotesImg{
@@ -631,7 +635,7 @@ section{
 }
 
 .card-content span{
-    color: #6d8a13;
+    color: #574f45;
     font-size: 14px !important;
     margin-bottom: 15px;
 }
@@ -667,7 +671,7 @@ section{
 .swiper-pagination-bullet-active-next-next,
 .swiper-pagination-bullet-active-prev,
 .swiper-pagination-bullet-active-prev-prev{
-    background-color: #fff !important;
+    background-color: #000000 !important;
 }
 
 
