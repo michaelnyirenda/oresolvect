@@ -594,7 +594,7 @@ section{
 
 .card:hover{
     transition: background 0.5s ease-in-out;
-    background: linear-gradient(180deg, #574f45,#f5c227,  #f5c22700);
+    background: linear-gradient(180deg, #25221e,#f5c227,  #f5c22700);
 }
 
 .card .quotesImg{
