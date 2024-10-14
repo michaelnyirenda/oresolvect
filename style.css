@@ -594,7 +594,7 @@ section{
 
 .card:hover{
     transition: background 0.5s ease-in-out;
-    background: linear-gradient(180deg, #574f45,#ddc57c, #f0dfb3,#f7ecbb00);
+    background: linear-gradient(180deg, #574f45);
 }
 
 .card .quotesImg{
@@ -635,7 +635,7 @@ section{
 }
 
 .card-content span{
-    color: #574f45;
+    color: #6d8a13;
     font-size: 14px !important;
     margin-bottom: 15px;
 }
