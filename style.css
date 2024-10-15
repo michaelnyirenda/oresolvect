@@ -207,7 +207,7 @@ section{
 }
 
 .absoluteHero{
-    max-width: 200px;
+    max-width: 400px;
     display: flex;
     position: relative;
     height: 90vh;
@@ -342,7 +342,7 @@ section{
 }
 
 .neon_div:nth-child(4){
-    background: linear-gradient(0deg, var(--txt-color) 0%, #574f45 100%);
+    background: linear-gradient(0deg, var(--txt-color) 0%, #81551e 100%);
 }
 
 .neon_div span{
@@ -544,7 +544,7 @@ section{
 }
 
 .serviceBox:nth-child(4){
-    background: linear-gradient(0deg,var(--txt-color) 0%, #574f45 100%);
+    background: linear-gradient(0deg,var(--txt-color) 0%, #81551e 100%);
 }
 
 /* // For Btns */
@@ -561,7 +561,7 @@ section{
 }
 
 .serviceBox:nth-child(4) .serviceBtn{
-    background: #574f45;
+    background: #81551e;
 }
 
 
@@ -588,13 +588,14 @@ section{
     cursor: none;
     border-radius: 10px;
     position: relative;
-    background: #ffffffde
+    background: #e2e2e2c0;
+    transition: background 0.5s ease-out;
     }
 
 
 .card:hover{
-    transition: background 0.5s ease-in-out;
-    background: linear-gradient(180deg, #25221e,#f5c227,  #f5c22700);
+    background: linear-gradient(180deg, #81551e,#f5c227,  #f5c22700);
+    cursor: pointer;
 }
 
 .card .quotesImg{
@@ -641,6 +642,7 @@ section{
 }
 .card-content:hover span{
     color: #000000;
+    transition: background 0.5s ease-out;
 }
 
 .name{
@@ -662,6 +664,11 @@ section{
     margin: 14px;
     margin-bottom: 20px;
     border-radius: 3px;
+}
+
+.seperator {
+    width: 100%;
+    height: 60px;
 }
 
 .swiper-pagination-bullet{
@@ -751,10 +758,10 @@ section{
     width: 100%;
     padding: 5px 0;
     border: none;
-    border-bottom: 2px solid #574f45;
+    border-bottom: 2px solid #81551e;
     background: transparent;
     outline: none;
-    color: #574f45;
+    color: #81551e;
     font-size: 14px;
     cursor: none;
     transition: .5s;
@@ -767,7 +774,7 @@ section{
     left: 0;
     pointer-events: none;
     font-size: 1em;
-    color: #574f45;
+    color: #81551e;
     transition: .5s;
     font-family: 'Poppins';
 }
@@ -776,7 +783,7 @@ section{
 .inputBox input:focus ~ span,
 .inputBox textarea:user-valid ~ span,
 .inputBox textarea:focus ~ span{
-    color: #574f45;
+    color: #81551e;
     transform: translateY(-10px);
     font-size: 0.65em;
 }
