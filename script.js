@@ -267,7 +267,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function () {
     const texts = document.querySelectorAll('.text-change');
+    const playButton = document.querySelector('.playButton');
+    const textStay = document.querySelector('.text-stay');
     let currentIndex = 0;
+
+    function adjustPlayButtonSize(currentText) {
+        // const contentWidth = textStay.scrollWidth;
+        const contentWidth = currentText.scrollWidth;
+        const contentHeight = playButton.scrollHeight;
+        playButton.style.width = `${contentWidth}px`;
+        playButton.style.height = `${contentHeight}px`;
+    }
 
     setInterval(() => {
         const currentText = texts[currentIndex];
@@ -281,10 +291,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
         setTimeout(() => {
             currentText.style.display = 'none';
-            nextText.style.display = 'inline';
+            nextText.style.display = 'inline-block';
+            adjustPlayButtonSize(); // Adjust the size after the text change
         }, 1000); // Match the duration of the fade-out animation
 
         currentIndex = nextIndex;
     }, 2000); // Change every 2 seconds
-});
 
+    // Initial size adjustment
+    adjustPlayButtonSize();
+
+    // Adjust size on window resize
+    window.addEventListener('resize', adjustPlayButtonSize);
+});

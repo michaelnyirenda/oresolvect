@@ -187,20 +187,21 @@ section{
     transition-delay: .3s;
 }
 
+
 .header_txt .playButton{
     background: transparent;
     border: 1px solid var(--txt-color);
     display:  inline flex;
-    align-items: start;
-    max-width: 425px;
+    align-items: center;
     border-radius: 30px;
     padding: 12px;
     margin-top: 500px;
+    transition: border-width 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    white-space: nowrap;
 }
 
-
 .header_txt .playButton img{
-    max-width: 40px;
+    max-width: 50px;
 }
 
 .header_txt  p{
