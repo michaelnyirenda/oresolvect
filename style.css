@@ -241,6 +241,7 @@ section{
 
 .absoluteHero .absoluteTxt{
     margin-top: 90px;
+    width: max-content;
 }
 
 
@@ -252,11 +253,11 @@ section{
 .absoluteTxt p{
     color: var(--light-txt);
     font-size: 12px;
-    margin: 16px 0;
+    margin: 15px 0;
 }
 
 .absoluteTxt .headerProfiles{
-    display: flex;
+    /* display: flex; */
     transform: translateX(10px);
 }
 
