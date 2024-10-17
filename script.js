@@ -1,4 +1,3 @@
-
 const parllaxDiv = document.querySelector('.parallaxDiv');
 const images = parllaxDiv.querySelectorAll('img');
 
@@ -236,3 +235,55 @@ closeMenu.addEventListener('click',()=>{
 const handleNavul = ()=>{
     closeMenu.click();
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const purposeContainer = document.getElementById('purpose-container');
+    const missionContainer = document.getElementById('mission-container');
+    let isPurposeVisible = true;
+
+    setInterval(() => {
+        if (isPurposeVisible) {
+            purposeContainer.classList.remove('fade-in');
+            purposeContainer.classList.add('fade-out');
+            missionContainer.classList.remove('fade-out');
+            missionContainer.classList.add('fade-in');
+            setTimeout(() => {
+                purposeContainer.style.display = 'none';
+                missionContainer.style.display = 'block';
+            }, 1000); // Match the duration of the fade-out animation
+        } else {
+            missionContainer.classList.remove('fade-in');
+            missionContainer.classList.add('fade-out');
+            purposeContainer.classList.remove('fade-out');
+            purposeContainer.classList.add('fade-in');
+            setTimeout(() => {
+                missionContainer.style.display = 'none';
+                purposeContainer.style.display = 'block';
+            }, 1000); // Match the duration of the fade-out animation
+        }
+        isPurposeVisible = !isPurposeVisible;
+    }, 5000); // Change every 3 seconds
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const texts = document.querySelectorAll('.text-change');
+    let currentIndex = 0;
+
+    setInterval(() => {
+        const currentText = texts[currentIndex];
+        const nextIndex = (currentIndex + 1) % texts.length;
+        const nextText = texts[nextIndex];
+
+        currentText.classList.remove('fade-in');
+        currentText.classList.add('fade-out');
+        nextText.classList.remove('fade-out');
+        nextText.classList.add('fade-in');
+
+        setTimeout(() => {
+            currentText.style.display = 'none';
+            nextText.style.display = 'inline';
+        }, 1000); // Match the duration of the fade-out animation
+
+        currentIndex = nextIndex;
+    }, 2000); // Change every 2 seconds
+});

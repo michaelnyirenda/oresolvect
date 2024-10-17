@@ -140,6 +140,7 @@ section{
     box-sizing: border-box;
 }
 
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -189,9 +190,9 @@ section{
 .header_txt .playButton{
     background: transparent;
     border: 1px solid var(--txt-color);
-    display: flex;
+    display: grid;
     align-items: center;
-    max-width: 200px;
+    max-width: 300px;
     border-radius: 30px;
     padding: 12px;
     margin-top: 60px;
@@ -205,6 +206,9 @@ section{
     font-size: 12px;
     margin-left: 20px;
 }
+
+
+
 
 .absoluteHero{
     max-width: 400px;
@@ -639,10 +643,16 @@ section{
     color: #f5c227;
     font-size: 14px !important;
     margin-bottom: 15px;
+    transition: background 0.5s ease-out;
 }
+.image-content:hover + .card-content + .card,
+.card-content:hover {
+    color: #000000;
+}
+
 .card-content:hover span{
     color: #000000;
-    transition: background 0.5s ease-out;
+    
 }
 
 .name{
@@ -956,4 +966,23 @@ section{
 
 #closeMenu{
     display: none;
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }

@@ -87,12 +87,13 @@
     }
 
     .header_txt .playButton{
-        max-width: 180px;
+        max-width: 300px;
         margin-top: 30px;
     }
 
     .parallaxDiv img{
         width: 130%;
+        margin-top: 50px;
     }
 
     .playButton img{
