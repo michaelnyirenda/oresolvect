@@ -287,3 +287,4 @@ document.addEventListener('DOMContentLoaded', function () {
         currentIndex = nextIndex;
     }, 2000); // Change every 2 seconds
 });
+
