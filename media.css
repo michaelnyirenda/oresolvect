@@ -57,13 +57,13 @@
     }
 
     #navbar ul li a{
-        color: white;
+        color: #222222;
         font-weight: 500;
         font-size: 1rem;
     }
 
     #navbar ul span{
-        color: white;
+        color: #222222;
         position: absolute;
         top: 25px;
         right: 22px;
@@ -87,13 +87,12 @@
     }
 
     .header_txt .playButton{
-        max-width: 100%;
-        margin-top: 30px;
+        max-width: 180px;
+        margin-top: 10px;
     }
 
     .parallaxDiv img{
         width: 130%;
-        margin-top: 10px;
     }
 
     .playButton img{
