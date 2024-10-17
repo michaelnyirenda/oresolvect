@@ -265,42 +265,42 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 5000); // Change every 3 seconds
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const texts = document.querySelectorAll('.text-change');
-    const playButton = document.querySelector('.playButton');
-    const textStay = document.querySelector('.text-stay');
-    let currentIndex = 0;
+// document.addEventListener('DOMContentLoaded', function () {
+//     const texts = document.querySelectorAll('.text-change');
+//     const playButton = document.querySelector('.playButton');
+//     const textStay = document.querySelector('.text-stay');
+//     let currentIndex = 0;
 
-    function adjustPlayButtonSize(currentText) {
-        // const contentWidth = textStay.scrollWidth;
-        const contentWidth = currentText.scrollWidth;
-        const contentHeight = playButton.scrollHeight;
-        playButton.style.width = `${contentWidth}px`;
-        playButton.style.height = `${contentHeight}px`;
-    }
+//     // Add transition for smooth resizing
+//     playButton.style.transition = 'width 0.5s, height 0.5s';
 
-    setInterval(() => {
-        const currentText = texts[currentIndex];
-        const nextIndex = (currentIndex + 1) % texts.length;
-        const nextText = texts[nextIndex];
+//     function adjustPlayButtonSize() {
+//         const currentText = texts[currentIndex];
+//         const combinedWidth = textStay.scrollWidth + currentText.scrollWidth;
+//         playButton.style.width = `${combinedWidth}px`;
+//     }
 
-        currentText.classList.remove('fade-in');
-        currentText.classList.add('fade-out');
-        nextText.classList.remove('fade-out');
-        nextText.classList.add('fade-in');
+//     setInterval(() => {
+//         const currentText = texts[currentIndex];
+//         const nextIndex = (currentIndex + 1) % texts.length;
+//         const nextText = texts[nextIndex];
 
-        setTimeout(() => {
-            currentText.style.display = 'none';
-            nextText.style.display = 'inline-block';
-            adjustPlayButtonSize(); // Adjust the size after the text change
-        }, 1000); // Match the duration of the fade-out animation
+//         currentText.classList.remove('fade-in');
+//         currentText.classList.add('fade-out');
+//         nextText.classList.remove('fade-out');
+//         nextText.classList.add('fade-in');
 
-        currentIndex = nextIndex;
-    }, 2000); // Change every 2 seconds
+//         setTimeout(() => {
+//             currentText.style.display = 'none';
+//             nextText.style.display = 'inline-block';
+//             currentIndex = nextIndex;
+//             adjustPlayButtonSize(); // Adjust the size after the text change
+//         }, 1000); // Match the duration of the fade-out animation
+//     }, 2000); // Change every 2 seconds
 
-    // Initial size adjustment
-    adjustPlayButtonSize();
+//     // Initial size adjustment
+//     adjustPlayButtonSize();
 
-    // Adjust size on window resize
-    window.addEventListener('resize', adjustPlayButtonSize);
-});
+//     // Adjust size on window resize
+//     window.addEventListener('resize', adjustPlayButtonSize);
+// });

@@ -195,15 +195,14 @@ section{
     display:  inline flex;
     align-items: center;
     border-radius: 30px;
-    padding: 12px;
-    margin-top: 500px;
-    transition: border-width 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
-    white-space: nowrap;
+    max-width: 100%;
+    padding: 15px;
+    margin-top: 750px;
 }
 
-.header_txt .playButton img{
+/* .header_txt .playButton img{
     max-width: 50px;
-}
+} */
 
 .header_txt  p{
     font-size: 12px;
@@ -244,6 +243,7 @@ section{
     margin-top: 90px;
 }
 
+
 .absoluteTxt h2{
     font-weight: 600;
     font-size: 17px;
@@ -258,6 +258,10 @@ section{
 .absoluteTxt .headerProfiles{
     display: flex;
     transform: translateX(10px);
+}
+
+.material-south {
+    color: var(--txt-color);
 }
 
 .headerProfiles img{
@@ -686,6 +690,7 @@ section{
     font-size: 14px;
     color: var(--light-txt);
     text-align: center;
+    padding: 6px;
 }
 
 .card-content button{
@@ -699,7 +704,7 @@ section{
 
 .seperator {
     width: 100%;
-    height: 60px;
+    height: 50px;
 }
 
 .swiper-pagination-bullet{
