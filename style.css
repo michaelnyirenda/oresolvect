@@ -188,33 +188,25 @@ section{
     transition-delay: .3s;
 }
 
-
 .header_txt .playButton{
     background: transparent;
-    border: 1px solid var(--txt-color);
-    display:  inline flex;
+    border: 0px solid var(--txt-color);
+    display: flex;
     align-items: center;
+    max-width: 200px;
     border-radius: 30px;
-    max-width: 100%;
-    padding: 15px;
-    margin-top: 750px;
+    padding: 12px;
+    margin-top: 60px;
 }
 
-/* .header_txt .playButton img{
-    max-width: 50px;
-} */
+.header_txt .playButton img{
+    max-width: 40px;
+}
 
-.header_txt  p{
+.header_txt .playButton p{
     font-size: 12px;
     margin-left: 20px;
 }
-
-.playButton span {
-    font-size: 12px;
-    margin: 2px;
-}
-
-
 
 .absoluteHero{
     max-width: 400px;
@@ -241,7 +233,6 @@ section{
 
 .absoluteHero .absoluteTxt{
     margin-top: 90px;
-    width: max-content;
 }
 
 
@@ -253,56 +244,16 @@ section{
 .absoluteTxt p{
     color: var(--light-txt);
     font-size: 12px;
-    margin: 15px 0;
+    margin: 16px 0;
 }
 
 .absoluteTxt .headerProfiles{
-    /* display: flex; */
+    display: flex;
     transform: translateX(10px);
 }
 
 .material-south {
     color: var(--txt-color);
-}
-
-.headerProfiles img{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 2px solid var(--txt-color);
-    margin-left: -10px;
-    z-index: 1;
-    object-fit: cover;
-}
-
-.headerProfiles img:nth-child(4){
-    z-index: 1;
-}
-
-.headerProfiles img:nth-child(3){
-    z-index: 2;
-}
-
-.headerProfiles img:nth-child(2){
-    z-index: 3;
-}
-
-.headerProfiles img:nth-child(1){
-    z-index: 4;
-}
-
-.headerProfiles .additionalCount{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 2px solid var(--txt-color);
-    margin-left: -10px;
-    z-index: -1;
-    color: var(--txt-color);
-    display: flex;
-    justify-content: center;
-    font-size: 13px;
-    align-items: center;
 }
 
 #ScrollMeDown{
@@ -320,7 +271,7 @@ section{
 
 #ScrollMeDown span{
     font-size: 16px;
-    border: 1px solid white;
+    border: 1px solid #222222;
     border-radius: 50%;
     padding: 12px;
     position: relative;
@@ -671,10 +622,7 @@ section{
     margin-bottom: 15px;
     transition: background 0.5s ease-out;
 }
-.image-content:hover + .card-content + .card,
-.card-content:hover {
-    color: #000000;
-}
+
 
 .card-content:hover span{
     color: #000000;
