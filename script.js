@@ -122,7 +122,7 @@ window.addEventListener('scroll', function() {
     if (aboutParaReveal < windowHeight - aboutParaRevealPoint) {
         if (!typed) {
             typed = true;
-            textTypingEffect(about_p,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna lacus. Nam vitae augue vitae tellus tempor consequat vel vel nibh.")
+            textTypingEffect(about_p,"Implementing and supporting technologies that enable organizations to deliver on their mandate is how we enable them to evolve.")
         }
     }else{
         typed = false;
