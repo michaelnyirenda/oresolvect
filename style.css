@@ -340,19 +340,19 @@ section{
     margin-bottom: 35px;
 }
 
-.neon_div:nth-child(1){
+.neon_1{
     background: linear-gradient(0deg,var(--txt-color) 0%, #f5c227 100%);
 }
 
-.neon_div:nth-child(2){
+.neon_2{
     background: linear-gradient(0deg, var(--txt-color) 0%, #c3bea1 100%);
 }
 
-.neon_div:nth-child(3){
+.neon_3{
     background: linear-gradient(0deg, var(--txt-color) 0%, #6d8a13 100%);
 }
 
-.neon_div:nth-child(4){
+.neon_4{
     background: linear-gradient(0deg, var(--txt-color) 0%, #81551e 100%);
 }
 
@@ -371,7 +371,7 @@ section{
     width: 20px;
     height: 20px;
     z-index: -1;
-    /* background: var(--color); */
+    background: var(--color);
     border-radius: 50%;
 }
 
@@ -379,6 +379,20 @@ section{
     font-weight: 400;
     font-size: 15px;
     margin-bottom: 6px;
+}
+
+.service-button {
+    color: white;
+    text-decoration: none;
+}
+
+.service-button:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.service-button:hover {
+    text-decoration: none;
 }
 
 
