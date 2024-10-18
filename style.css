@@ -295,6 +295,7 @@ section{
     padding: 26px;
     border-radius: 70px;
     margin-bottom: 35px;
+        cursor: none;
 }
 
 .neon_1{
@@ -341,15 +342,18 @@ section{
 .service-button {
     color: white;
     text-decoration: none;
+        cursor: none;
 }
 
 .service-button:visited {
     color: white;
     text-decoration: none;
+        cursor: none;
 }
 
 .service-button:hover {
     text-decoration: none;
+    cursor: none;
 }
 
 
