@@ -78,6 +78,7 @@ nav h1{
 nav.active{
     padding: 16px 6%;
     background: var(--main-bg);
+    z-index: 9999;
 }
 
 nav ul{
@@ -132,7 +133,7 @@ nav div span:nth-child(1){
 }
 
 
-/* ------------------ Home ------------------------ */
+/* ------------------------ Home ------------------------ */
 
 section{
     max-width: 1280px;
@@ -576,7 +577,6 @@ section{
 
 .card:hover{
     background: linear-gradient(180deg, #81551e,#f5c227,  #f5c22700);
-    cursor: pointer;
 }
 
 .card .quotesImg{
@@ -624,9 +624,8 @@ section{
 }
 
 
-.card-content:hover span{
+.card:hover .card-content span{
     color: #000000;
-    
 }
 
 .name{
@@ -638,8 +637,9 @@ section{
 .description{
     font-size: 14px;
     color: var(--light-txt);
-    text-align: center;
+    text-align: justify;
     padding: 6px;
+
 }
 
 .card-content button{

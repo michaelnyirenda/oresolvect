@@ -49,6 +49,7 @@
 
     #navul.activated{
         right: 0%;
+        
     }
 
     #navbar ul li{
@@ -114,7 +115,9 @@
 
     #ScrollMeDown{
         /* left: 80%; */
-        top: 95%;
+        bottom: 1px;
+        position: relative;
+        z-index: 90; 
     }
 
     #data{

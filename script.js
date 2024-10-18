@@ -122,7 +122,7 @@ window.addEventListener('scroll', function() {
     if (aboutParaReveal < windowHeight - aboutParaRevealPoint) {
         if (!typed) {
             typed = true;
-            textTypingEffect(about_p,"Implementing and supporting technologies that enable organizations to deliver on their mandate is how we enable them to evolve.")
+            textTypingEffect(about_p,"Implementing and supporting technologies that enable organizations to deliver on their mandate is how we enable them to evolve. Optimize your operations with our support.")
         }
     }else{
         typed = false;
@@ -236,6 +236,9 @@ const handleNavul = ()=>{
     closeMenu.click();
 }
 
+
+// For Team
+
 document.addEventListener('DOMContentLoaded', function() {
     const purposeContainer = document.getElementById('purpose-container');
     const missionContainer = document.getElementById('mission-container');
@@ -264,43 +267,3 @@ document.addEventListener('DOMContentLoaded', function() {
         isPurposeVisible = !isPurposeVisible;
     }, 5000); // Change every 3 seconds
 });
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     const texts = document.querySelectorAll('.text-change');
-//     const playButton = document.querySelector('.playButton');
-//     const textStay = document.querySelector('.text-stay');
-//     let currentIndex = 0;
-
-//     // Add transition for smooth resizing
-//     playButton.style.transition = 'width 0.5s, height 0.5s';
-
-//     function adjustPlayButtonSize() {
-//         const currentText = texts[currentIndex];
-//         const combinedWidth = textStay.scrollWidth + currentText.scrollWidth;
-//         playButton.style.width = `${combinedWidth}px`;
-//     }
-
-//     setInterval(() => {
-//         const currentText = texts[currentIndex];
-//         const nextIndex = (currentIndex + 1) % texts.length;
-//         const nextText = texts[nextIndex];
-
-//         currentText.classList.remove('fade-in');
-//         currentText.classList.add('fade-out');
-//         nextText.classList.remove('fade-out');
-//         nextText.classList.add('fade-in');
-
-//         setTimeout(() => {
-//             currentText.style.display = 'none';
-//             nextText.style.display = 'inline-block';
-//             currentIndex = nextIndex;
-//             adjustPlayButtonSize(); // Adjust the size after the text change
-//         }, 1000); // Match the duration of the fade-out animation
-//     }, 2000); // Change every 2 seconds
-
-//     // Initial size adjustment
-//     adjustPlayButtonSize();
-
-//     // Adjust size on window resize
-//     window.addEventListener('resize', adjustPlayButtonSize);
-// });
