@@ -167,15 +167,14 @@
         grid-template-columns: repeat(1,1fr);
         grid-template-rows: repeat(1,auto);
     }
-    .logo {
-            max-width: 100%;
-            align-items: center;
     
-        }
-
-
+    .logo {
+        max-width: 100%;
+        align-items: center; 
+        z-index: 100;   
+        position: relative;
+    }
 }
-
 
 
 @media (max-width:560px){
