@@ -621,7 +621,7 @@ section{
 }
 
 .card-content span{
-    color: #f5c227;
+    color: #dda600;
     font-size: 14px !important;
     margin-bottom: 15px;
     transition: background 0.5s ease-out;
@@ -844,7 +844,9 @@ section{
 
 #footer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #footer li{
@@ -890,6 +892,12 @@ section{
     font-size: 16px;
     font-weight: 500;
     background: #f5c227;
+}
+
+.logo {
+    max-width: 600px;
+    align-items: center;
+
 }
 
 

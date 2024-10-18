@@ -167,7 +167,7 @@ var swiper = new Swiper(".slide-content", {
         prevEl: ".swiper-button-prev",
     },
     autoplay: {
-        delay: 2000, // 2 seconds
+        delay: 3000, // 2 seconds
         disableOnInteraction: false,
     },
     breakpoints: {
@@ -237,7 +237,7 @@ const handleNavul = ()=>{
 }
 
 
-// For Team
+// For Home
 
 document.addEventListener('DOMContentLoaded', function() {
     const purposeContainer = document.getElementById('purpose-container');
