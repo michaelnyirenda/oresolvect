@@ -149,7 +149,7 @@ section{
     position: relative;
     margin: auto;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
     padding-top: 0;
 }
@@ -259,7 +259,7 @@ section{
 
 #ScrollMeDown{
     position: absolute;
-    bottom: 25px;
+    bottom: 1px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
