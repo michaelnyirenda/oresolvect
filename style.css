@@ -240,13 +240,15 @@ section{
 
 .absoluteTxt h2{
     font-weight: 600;
-    font-size: 17px;
+    font-size: 30px;
+    text-align: left;
 }
 
 .absoluteTxt p{
     color: var(--light-txt);
     font-size: 12px;
-    margin: 16px 0;
+    margin: 10px 0;
+    text-align: left;
 }
 
 .absoluteTxt .headerProfiles{
@@ -813,11 +815,11 @@ section{
     align-items: center;
     width: 100%;
     z-index: 9999;
-    background: rgb(31,31,31);
+    /* background: rgb(31,31,31); */
 }
 
 .alertBox p{
-    color: white;
+    color: rgb(17, 17, 17);
     margin: 8px 0;
 }
 
@@ -898,9 +900,13 @@ section{
 .logo {
     max-width: 600px;
     align-items: center;
-
 }
 
+.main-logo {
+    max-width: 600px;
+    align-items: center;
+
+}
 
 .cursor{
     width: 8px;
