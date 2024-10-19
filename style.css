@@ -151,7 +151,7 @@ section{
     position: relative;
     margin: auto;
     align-items: center;
-    height: 90vh;
+    height: 0px;
     overflow: hidden;
     padding-top: 0;
 }
@@ -284,11 +284,12 @@ section{
 
 
 .neonContainer{
-    margin: 20px auto;
+    /* margin: 10px auto; */
     color: #ffffff;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    height: 0px;
 }
 
 .neon_div{
@@ -369,6 +370,7 @@ section{
     grid-template-rows: auto auto;
     gap: 20px;
     align-items: center;
+    margin-top: 50px;
 }
 
 .aboutBox{
