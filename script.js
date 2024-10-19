@@ -108,48 +108,48 @@ const textTypingEffect = (element, text, i = 0, isSecondParagraph = false) => {
     setTimeout(() => textTypingEffect(element, text, i + 1, isSecondParagraph), 20);
 };
 
-document.addEventListener('DOMContentLoaded', function () {
-    let windowHeight = window.innerHeight;
-    let aboutParaReveal = about_p.getBoundingClientRect().top;
-    let aboutParaRevealPoint = 140;
+// document.addEventListener('DOMContentLoaded', function () {
+//     let windowHeight = window.innerHeight;
+//     let aboutParaReveal = about_p.getBoundingClientRect().top;
+//     let aboutParaRevealPoint = 140;
 
-    if (aboutParaReveal < windowHeight - aboutParaRevealPoint) {
-        if (!typed) {
-            typed = true;
-            const firstParagraph = "OreSolve partners with individuals, communities, organisations, and governments to identify and pursue opportunities for improvement, innovation, and development.";
-            const secondParagraph = "We support organisations' operations, enable better decision-making, and provide project management services for implementing sustainable solutions in an ever-changing world.";
-            textTypingEffect(about_p, firstParagraph, 0, false);
-            setTimeout(() => textTypingEffect(about_p, secondParagraph, 0, true), firstParagraph.length * 20 + 500); // Adding a delay before starting the second paragraph
-        }
-    }
+//     if (aboutParaReveal < windowHeight - aboutParaRevealPoint) {
+//         if (!typed) {
+//             typed = true;
+//             const firstParagraph = "OreSolve partners with individuals, communities, organisations, and governments to identify and pursue opportunities for improvement, innovation, and development.";
+//             const secondParagraph = "We support organisations' operations, enable better decision-making, and provide project management services for implementing sustainable solutions in an ever-changing world.";
+//             textTypingEffect(about_p, firstParagraph, 0, false);
+//             setTimeout(() => textTypingEffect(about_p, secondParagraph, 0, true), firstParagraph.length * 20 + 500); // Adding a delay before starting the second paragraph
+//         }
+//     }
 
-    window.addEventListener('scroll', function () {
-        const scrollY = window.scrollY;
+//     window.addEventListener('scroll', function () {
+//         const scrollY = window.scrollY;
 
-        nextHero.style.transform = `translateX(${-(scrollY / 4)}px)`;
+//         nextHero.style.transform = `translateX(${-(scrollY / 4)}px)`;
 
-        if (scrollY > 0) {
-            navbar.classList.add('active');
-        } else {
-            navbar.classList.remove('active');
-        }
+//         if (scrollY > 0) {
+//             navbar.classList.add('active');
+//         } else {
+//             navbar.classList.remove('active');
+//         }
 
-        let animatedGraphReveal = animatedGraph.getBoundingClientRect().top;
-        let animatedGraphRevealPoint = 100;
+//         let animatedGraphReveal = animatedGraph.getBoundingClientRect().top;
+//         let animatedGraphRevealPoint = 100;
 
-        if (animatedGraphReveal < windowHeight - animatedGraphRevealPoint) {
-            if (!animatedGraph.classList.contains('active')) {
-                animatedGraph.classList.add('active');
-                animatedGraph.setAttribute('data', './assets/Graph-Anim.svg');
-            }
-        } else {
-            animatedGraph.classList.remove('active');
-            animatedGraph.setAttribute('data', '');
-        }
+//         if (animatedGraphReveal < windowHeight - animatedGraphRevealPoint) {
+//             if (!animatedGraph.classList.contains('active')) {
+//                 animatedGraph.classList.add('active');
+//                 animatedGraph.setAttribute('data', './assets/Graph-Anim.svg');
+//             }
+//         } else {
+//             animatedGraph.classList.remove('active');
+//             animatedGraph.setAttribute('data', '');
+//         }
 
-        revealOnScroll();
-    });
-});
+//         revealOnScroll();
+//     });
+// });
 
 // For Swiper 
 
