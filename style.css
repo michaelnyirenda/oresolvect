@@ -69,6 +69,8 @@ nav{
     transform: translateX(-50%);
     box-sizing: border-box;
     transition: .2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Add this line */
 }
 
 nav h1{
