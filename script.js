@@ -90,19 +90,23 @@ const animatedGraph = this.document.getElementById('animatedGraph');
 let typed = false;
 
 
-const textTypingEffect = (element, text, i =0)=>{
+const textTypingEffect = (element, text, i = 0, isSecondParagraph = false) => {
     if (!typed) {
-        return
-    }
-
-    element.textContent += text[i];
-
-    if (i === text.length -1) {
         return;
     }
 
-    setTimeout(()=> textTypingEffect(element,text,i+1),20)
-}
+    if (isSecondParagraph && i === 0) {
+        element.innerHTML += `<br><br>`;
+    }
+
+    element.innerHTML += text[i];
+
+    if (i === text.length - 1) {
+        return;
+    }
+
+    setTimeout(() => textTypingEffect(element, text, i + 1, isSecondParagraph), 20);
+};
 
 document.addEventListener('DOMContentLoaded', function () {
     let windowHeight = window.innerHeight;
@@ -112,7 +116,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (aboutParaReveal < windowHeight - aboutParaRevealPoint) {
         if (!typed) {
             typed = true;
-            textTypingEffect(about_p, "Implementing and supporting technologies that enable organizations to deliver on their mandate is how we enable them to evolve. Optimize your operations with our support.")
+            const firstParagraph = "OreSolve partners with individuals, communities, organisations, and governments to identify and pursue opportunities for improvement, innovation, and development.";
+            const secondParagraph = "We support organisations' operations, enable better decision-making, and provide project management services for implementing sustainable solutions in an ever-changing world.";
+            textTypingEffect(about_p, firstParagraph, 0, false);
+            setTimeout(() => textTypingEffect(about_p, secondParagraph, 0, true), firstParagraph.length * 20 + 500); // Adding a delay before starting the second paragraph
         }
     }
 
@@ -122,9 +129,9 @@ document.addEventListener('DOMContentLoaded', function () {
         nextHero.style.transform = `translateX(${-(scrollY / 4)}px)`;
 
         if (scrollY > 0) {
-            navbar.classList.add('active')
+            navbar.classList.add('active');
         } else {
-            navbar.classList.remove('active')
+            navbar.classList.remove('active');
         }
 
         let animatedGraphReveal = animatedGraph.getBoundingClientRect().top;
@@ -140,10 +147,18 @@ document.addEventListener('DOMContentLoaded', function () {
             animatedGraph.setAttribute('data', '');
         }
 
-        revealOnScroll()
+        revealOnScroll();
     });
 });
 
+// For Swiper 
+
+var swiper = new Swiper(".slide-content", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    centerSlide: 'true',
+});
 
 
 // For Swiper 

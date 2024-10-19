@@ -734,7 +734,7 @@ section{
     text-align: center;
     max-width: 500px;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 #contact h1,
@@ -851,8 +851,9 @@ section{
 #footer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:start;
     align-items: center;
+    padding: 50px 6% 20px 6%;;
 }
 
 #footer li{
@@ -903,6 +904,8 @@ section{
 .logo {
     max-width: 600px;
     align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .main-logo {
