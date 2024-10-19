@@ -104,17 +104,7 @@ const textTypingEffect = (element, text, i =0)=>{
     setTimeout(()=> textTypingEffect(element,text,i+1),20)
 }
 
-window.addEventListener('scroll', function() {
-    const scrollY = window.scrollY;
-
-    nextHero.style.transform = `translateX(${-(scrollY / 4)}px)`;
-    
-    if (scrollY > 100) {
-        navbar.classList.add('active')
-    }else{
-       navbar.classList.remove('active')
-    }
-
+document.addEventListener('DOMContentLoaded', function () {
     let windowHeight = window.innerHeight;
     let aboutParaReveal = about_p.getBoundingClientRect().top;
     let aboutParaRevealPoint = 140;
@@ -122,29 +112,37 @@ window.addEventListener('scroll', function() {
     if (aboutParaReveal < windowHeight - aboutParaRevealPoint) {
         if (!typed) {
             typed = true;
-            textTypingEffect(about_p,"Implementing and supporting technologies that enable organizations to deliver on their mandate is how we enable them to evolve. Optimize your operations with our support.")
+            textTypingEffect(about_p, "Implementing and supporting technologies that enable organizations to deliver on their mandate is how we enable them to evolve. Optimize your operations with our support.")
         }
-    }else{
-        typed = false;
-        about_p.textContent = '';
     }
 
+    window.addEventListener('scroll', function () {
+        const scrollY = window.scrollY;
 
-    let animatedGraphReveal = animatedGraph.getBoundingClientRect().top;
-    let animatedGraphRevealPoint = 100;
+        nextHero.style.transform = `translateX(${-(scrollY / 4)}px)`;
 
-    if (animatedGraphReveal < windowHeight - animatedGraphRevealPoint) {
-        if (!animatedGraph.classList.contains('active')) {
-            animatedGraph.classList.add('active');
-            animatedGraph.setAttribute('data','./assets/Graph-Anim.svg');
+        if (scrollY > 0) {
+            navbar.classList.add('active')
+        } else {
+            navbar.classList.remove('active')
         }
-    }else{
-        animatedGraph.classList.remove('active');
-        animatedGraph.setAttribute('data','');
-    }
 
-    revealOnScroll()
-})
+        let animatedGraphReveal = animatedGraph.getBoundingClientRect().top;
+        let animatedGraphRevealPoint = 100;
+
+        if (animatedGraphReveal < windowHeight - animatedGraphRevealPoint) {
+            if (!animatedGraph.classList.contains('active')) {
+                animatedGraph.classList.add('active');
+                animatedGraph.setAttribute('data', './assets/Graph-Anim.svg');
+            }
+        } else {
+            animatedGraph.classList.remove('active');
+            animatedGraph.setAttribute('data', '');
+        }
+
+        revealOnScroll()
+    });
+});
 
 
 
