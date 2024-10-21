@@ -76,46 +76,8 @@
         flex-direction: column;
         height: 0px;
     }
-/* 
-    .header_txt{
-        margin-top: 30px;
-        width: 90% !important;
-    }
-
-    .header_txt #heroHead{
-        line-height: normal;
-        font-size: 2.2em !important;
-        padding-top: 100px;
-    }
-
-        .header_txt .playButton {
-            max-width: 180px;
-            margin-top: 30px;
-        }
-
-    .parallaxDiv img{
-        width: 130%;
-        margin-top: 100px;
-    }
-
-    .playButton span{
-        font-size: 12px;
-        margin: 1px;
-    }
-
-
-    .absoluteHero{
-        margin-top: 100px;
-        height: 30vh;
-    }
-
-    .absoluteHero h1{
-        top: 30%;
-        left: 20%;
-    } */
 
     #ScrollMeDown{
-        /* left: 80%; */
         bottom: 1px;
         position: relative;
         z-index: 90; 

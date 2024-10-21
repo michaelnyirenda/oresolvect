@@ -20,14 +20,14 @@
     <!-- Navigation Bar -->
     <nav id="navbar">
         <div class="logo-container hoverElements">
-            <img src="./assets/logo (2).png" alt="OreSolve Logo" style="height: 50px;">
+            <a class="hoverElements" onclick="handleNavul()" href="index.html"><img src="./assets/logo (2).jpg" alt="OreSolve Logo" style="height: 50px;"></a>
             <!-- <h1>OreSolve</h1> -->
         </div>
         <ul id="navul">
-            <li><a class="hoverElements" onclick="handleNavul()" href="#home">Home</a></li>
-            <li><a class="hoverElements" onclick="handleNavul()" href="#about">About</a></li>
-            <li><a class="hoverElements" onclick="handleNavul()" href="#services">Services</a></li>
-            <li><a class="hoverElements" onclick="handleNavul()" href="#team">Team</a></li>
+            <li><a class="hoverElements" onclick="handleNavul()" href="index.html">Home</a></li>
+            <li><a class="hoverElements" onclick="handleNavul()" href="services.html">What We Do</a></li>
+            <li><a class="hoverElements" onclick="handleNavul()" href="about us.html">About Us</a></li>
+            <li><a class="hoverElements" onclick="handleNavul()" href="contact us.html">Contact Us</a></li>
             <span class="material-symbols-outlined" id="closeMenu">
                 close
             </span>
@@ -39,337 +39,81 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="header">
+    <section id="home" class="header" style="margin-top: 0px; margin-bottom: 150px;">
         <div class="parallaxDiv revealElements">
-            <!-- <img src="./assets/Main Logo.png" alt="Logo" class="main-logo"> -->
-            <!-- <img src="./assets/home_4.png" alt="Parallax" class="ParallaxImgs">
-            <img src="./assets/home_3.png" alt="Parallax" class="ParallaxImgs">
-            <img src="./assets/home_2.png" alt="Parallax" class="ParallaxImgs">
-            <img src="./assets/home_1.png" alt="Parallax" class="ParallaxImgs"> -->
         </div>
-        <div class="header_txt">
-            <!-- <h1 id="heroHead" class="revealElements">Everything you need to start and run your Business</h1> -->
-            <div class="playButton hoverElements revealElements">
-                <img src="" alt="">
-                <!-- <p>View Demos <br>and Highlights</p> -->
-            </div>
-        </div>
-        <div class="header_txt absoluteHero">
-            <div>
-                <h1 id="nextHero"> </h1>
-            </div>
-            <div class="absoluteTxt revealElements">
-                <!-- <div class="content-container" id="purpose-container">
-                    <h2 class="heading">Our Purpose</h2>
-                    <p class="heading-text">Oresolve will support business operations, decision-making, and provide project
-                        management
-                        services to implement
-                        sustainable solutions in an ever-changing world.</p>
-                </div>
-                <div class="content-container" id="mission-container" style="display: none;">
-                    <h2 class="heading">Our Mission</h2>
-                    <p class="heading-text">OreSolve partners with individuals, communities, organizations, and governments to
-                        identify,
-                        and pursue opportunities
-                        for improvement, innovation, and development.</p>
-                </div> -->
-            </div>
-        </div>
-        <!-- <a href="#about" id="ScrollMeDown" class="hoverElements">
-            <span class="material-symbols-outlined material-south">
-                south
-            </span>
-        </a> -->
     </section>
 
-    <!-- Service Buttons -->
-    <!-- <section class="neonContainer">
-        <a class="service-button" onclick="handleNavul()" href="#services">
-            <div class="neon_div neon_1 hoverElements revealElements" >
-                <h1>Project Management</h1>
-                <span class="material-symbols-outlined">
-                    north_east
-                </span>
-            </div>
-        </a>
-        <a class="service-button" onclick="handleNavul()" href="#services">
-            <div class="neon_div neon_2 hoverElements revealElements" >
-                <h1>Financial Advisory</h1>
-                <span class="material-symbols-outlined">
-                    north_east
-                </span>
-            </div>
-        </a>
-        <a class="service-button" onclick="handleNavul()" href="#services">
-            <div class="neon_div neon_3 hoverElements revealElements">
-                <h1>Software Solution</h1>
-                <span class="material-symbols-outlined">
-                    north_east
-                </span>
-            </div>
-        </a>
-        <a class="service-button" onclick="handleNavul()" href="#services">
-            <div class="neon_div neon_4 hoverElements revealElements" >
-                <h1>Operational Support</h1>
-                <span class="material-symbols-outlined">
-                    north_east
-                </span>
-            </div>
-        </a>
-    </section> -->
-
     <!-- About Section -->
-    <section id="about">
+    <section id="about" style="margin-top: 0;">
         <div class="aboutBox about_txt revealElements">
-            <h1>With you, we can always find a way forward to <span style="color: #f5c227;">support and optimise operations.</span></h1>
+            <h1>With you, we can always find a way forward to <span style="color: #6d8a13;">support and optimise operations.</span></h1>
             <p id="about_p">
                 OreSolve partners with individuals, communities, organisations, and governments to identify and pursue opportunities for
                 improvement, innovation, and development.
                 <br><br>
-                We support organisations' operations, enable better decision-making, and provide project management services for
-                implementing sustainable solutions in an ever-changing world.
+                We support and bring efficiency to business operations and health programs in the following
+                focus areas:
+                <br><br>
             </p>
+            <div class="aboutBox about_txt revealElements">
+                <ul>
+                    <li class="revealElements">
+                        <a class="hoverElements" href="services.html">
+                            <span class="material-symbols-outlined">north_east</span> Project Management
+                        </a>
+                    </li>
+                    <li class="revealElements">
+                        <a class="hoverElements" href="services.html">
+                            <span class="material-symbols-outlined">north_east</span> Health Information Strengthening
+                        </a>
+                    </li>
+                    <li class="revealElements">
+                        <a class="hoverElements" href="services.html">
+                            <span class="material-symbols-outlined">north_east</span> Research, Monitoring and Evaluation
+                        </a>
+                    </li>
+                    <li class="revealElements">
+                        <a class="hoverElements" href="services.html">
+                            <span class="material-symbols-outlined">north_east</span>Process Design
+                            and
+                            Re-engineering
+                        </a>
+                    </li>
+                    <li class="revealElements">
+                        <a class="hoverElements" href="services.html">
+                            <span class="material-symbols-outlined">north_east</span> Systems Development and ICT Support
+                        </a>
+                    </li>
+                    <li class="revealElements">
+                        <a class="hoverElements" href="services.html">
+                            <span class="material-symbols-outlined">north_east</span> Accounting and Administration
+                        </a>
+                    </li>
+                    <li class="hoverElements" class="revealElements">
+                        <a href="services.html">
+                            <span class="material-symbols-outlined">north_east</span> Human Resources and Payroll
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <!-- <div class="aboutBox about_txt revealElements">
-            <h3>What we offer to Empower Your Business?</h3>
-            <ul>
-                <li class="revealElements">
-                    <span class="material-symbols-outlined">
-                        north_east
-                    </span> Expert Guidance
-                </li>
-                <li class="revealElements">
-                    <span class="material-symbols-outlined">
-                        north_east
-                    </span> Business Analyst
-                </li>
-                <li class="revealElements">
-                    <span class="material-symbols-outlined">
-                        north_east
-                    </span> Innovative Solutions
-                </li>
-            </ul>
-        </div> -->
         <div class="aboutBox aboutImgBox hoverElements revealElements">
-            <object data="./assets/Graph-Anim.svg" type="image/svg+xml" id="animatedGraph"></object>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services">
-        <h1 class="revealElements">Our Services</h1>
-        <div class="serviceContainer">
-            <div class="serviceBox revealElements">
-                <div>
-                    <h2>Project Management</h2>
-                    <p>Charting our skilled project managers to take the responsibility of managing projects, while your organization’s technical experts work as part of the project team to execute well-coordinated activities</p>
-                </div>
-                <div>
-                    <span class="material-symbols-outlined serviceBtn">
-                        inventory_2
-                    </span>
-                    <!-- <button style="color: white;">
-                        Explore More <span class="material-symbols-outlined">
-                            trending_up
-                        </span>
-                    </button> -->
-                </div>
-            </div>
-            <div class="serviceBox revealElements">
-                <div>
-                    <h2>Financial Advisory</h2>
-                    <p>Leveraging our team of expert financial advisors to provide strategic guidance and support, empowering your organization
-                    to make informed financial decisions and achieve its financial goals.</p>
-                </div>
-                <div>
-                    <span class="material-symbols-outlined serviceBtn">
-                        payments
-                    </span>
-                    <!-- <button style="color: white;">
-                        Explore More <span class="material-symbols-outlined">
-                            trending_up
-                        </span>
-                    </button> -->
-                </div>
-            </div>
-            <div class="serviceBox revealElements">
-                <div>
-                    <h2>Software Solutions</h2>
-                    <p>Designing and developing cutting-edge software solutions tailored to your specific business needs, streamlining
-                    operations, and enhancing productivity through innovative technology.</p>
-                </div>
-                <div>
-                    <span class="material-symbols-outlined serviceBtn">
-                        lock
-                    </span>
-                    <!-- <button style="color: white;">
-                        Explore More <span class="material-symbols-outlined">
-                            trending_up
-                        </span>
-                    </button> -->
-                </div>
-            </div>
-            <div class="serviceBox revealElements">
-                <div>
-                    <h2>Operational Support</h2>
-                    <p>Providing seamless and reliable support for your day-to-day operations, ensuring business continuity and maximizing
-                    efficiency through proactive monitoring, timely maintenance, and expert troubleshooting.</p>
-                </div>
-                <div>
-                    <span class="material-symbols-outlined serviceBtn">
-                        public
-                    </span>
-                    <!-- <button style="color: white;">
-                        Explore More <span class="material-symbols-outlined">
-                            trending_up
-                        </span>
-                    </button> -->
-                </div>
+            <div class="text-and-graph">            
+                <object data="./assets/Graph-Anim.svg" type="image/svg+xml" id="animatedGraph"></object>
+                <p><strong>Survey and Data Analytics Services Provider</strong></p>
             </div>
         </div>
     </section>
-
-    <!-- Team Section -->
-    <section id="team" class="testimonials revealElements">
-        <h1>The OreSolve Team</h1>
-        <div class="slide-container swiper">
-            <div class="slide-content">
-                <div class="card-wrapper swiper-wrapper">
-                    <div class="card hoverElements swiper-slide">
-                        <img src="./assets/quote.svg" alt="Quotes" class="quotesImg">
-                        <div class="image-content">
-                            <div class="card-image">
-                                <img src="./assets/portrait1.jpg" alt="Portrait" class="card-img">
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h2 class="name">Oretu Kavari</h2>
-                            <span>Principal Consultant</span>
-                            <p class="description">Oretu is a project management and IT consultant with 17 years experience in the field. He has successfully managed projects in the corporate and public health sectors, demonstrating excellent leadership and teamwork skills.</p>
-                            <!-- <button class="card-button">View More</button> -->
-                        </div>
-                    </div>
-                    <div class="card hoverElements swiper-slide">
-                        <img src="./assets/quote.svg" alt="Quotes" class="quotesImg">
-                        <div class="image-content">
-                            <div class="card-image">
-                                <img src="./assets/portrait2.jpg" alt="Portrait" class="card-img">
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h2 class="name">Leilanie Chanberlain</h2>
-                            <span>Senior Financial Consultant</span>
-                            <p class="description">Leilanie is a finance and operations expert with 19+ years of experience and a strong track record. They have excellent financial management skills, are an effective communicator, and a capable team player.</p>
-                            <!-- <button class="card-button">View More</button> -->
-                        </div>
-                    </div>
-                    <div class="card hoverElements swiper-slide">
-                        <img src="./assets/quote.svg" alt="Quotes" class="quotesImg">
-                        <div class="image-content">
-                            <div class="card-image">
-                                <img src="./assets/portrait5.jpg" alt="Portrait" class="card-img">
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h2 class="name">Elize Booys</h2>
-                            <span>Financial Consultant</span>
-                            <p class="description">Elize has 15+ years of experience in finance, specializing in PEPFAR and EU-funded organizations. She excels in
-                            financial management, budgeting, risk management, and grants, and thrives in fast-paced environments.</p>
-                            <!-- <button class="card-button">View More</button> -->
-                        </div>
-                    </div>
-                    <div class="card hoverElements swiper-slide">
-                        <img src="./assets/quote.svg" alt="Quotes" class="quotesImg">
-                        <div class="image-content">
-                            <div class="card-image">
-                                <img src="./assets/portrait4.jpg" alt="Portrait" class="card-img">
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h2 class="name">Unore Karutjaiva</h2>
-                            <span>Business Devolpment Consultant</span>
-                            <p class="description">Unore Karutjaiva is a finance professional with expertise in business management, fintech security, and logistics. He
-                            has a strong track record in sales and is a certified financial planner with excellent interpersonal skills.</p>
-                            <!-- <button class="card-button">View More</button> -->
-                        </div>
-                    </div>
-                    <div class="card hoverElements swiper-slide">
-                        <img src="./assets/quote.svg" alt="Quotes" class="quotesImg">
-                        <div class="image-content">
-                            <div class="card-image">
-                                <img src="./assets/portrait5.jpg" alt="Portrait" class="card-img">
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h2 class="name">Julia Nangombe</h2>
-                            <span>Senior Consultant</span>
-                            <p class="description">With a PhD in Public Health and 25+ years of experience, Julia Nangombe collaborates with diverse partners, including NGOs and international organizations, to
-                            implement effective health interventions.</p>
-                            <!-- <button class="card-button">View More</button> -->
-                        </div>
-                    </div>
-                    <div class="card hoverElements swiper-slide">
-                        <img src="./assets/quote.svg" alt="Quotes" class="quotesImg">
-                        <div class="image-content">
-                            <div class="card-image">
-                                <img src="./assets/portrait6.jpg" alt="Portrait" class="card-img">
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h2 class="name">Michael Nyirenda</h2>
-                            <span>Systems Analyst</span>
-                            <p class="description">Michael has a bachelor's degree in software development. He combines technical expertise
-                            with creative design skills to provide IT troubleshooting and helpdesk support. Proficient in Python and front-end development.</p>
-                            <!-- <button class="card-button">View More</button> -->
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="seperator">
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h1 class="revealElements">Contact Us</h1>
-        <p class="revealElements">We're here to help you with any questions or support you need. Reach out to us and we'll respond as soon as
-            possible.</p>
-        <div class="contactDiv revealElements">
-            <form id="contactForm">
-                <h2>Send Message</h2>
-                <div class="inputBox hoverElements">
-                    <input type="text" required name="user_name">
-                    <span>Your Name</span>
-                </div>
-                <div class="inputBox hoverElements">
-                    <input type="text" required name="user_email">
-                    <span>Email Address</span>
-                </div>
-                <div class="inputBox hoverElements">
-                    <textarea name="user_message" id="message"></textarea>
-                    <span>Your Message</span>
-                </div>
-                <input type="submit" class="hoverElements" value="Submit">
-            </form>
-        </div>
-    </section>
-
+    
     <!-- Footer Section -->
-    <section id="footer">
-        <ul>
-            <li><a class="hoverElements" href="#home">Home</a></li>
-            <li><a class="hoverElements" href="#about">About</a></li>
-            <li><a class="hoverElements" href="#services">Services</a></li>
-            <li><a class="hoverElements" href="#team">Team</a></li>
-        </ul>
-        
-        <div >
-            <img src="./assets/logo (2).png" alt="Logo" class="logo">
-        </div>
-    </section>
+    <footer>
+        <p><strong>Oresolve Consulting and Technologies (Pty) Ltd.</strong></p>
+        <p>12 Adler Street, Windhoek West, Windhoek, Namibia</p>
+        <p>+264 857887233 / +264 811499052</p>
+        <p><strong>Operational Support:</strong> info@oresolvect.com</p>
+        <p><strong>Technical Support:</strong> support@oresolvect.com</p>
+    </footer>
 
     <!-- Cursor -->
     <div class="cursor"></div> 

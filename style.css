@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import "compass/css3";
 /* Imported Roboto, Poppins, Anton, Varela Font Family */
 
 :root {
     /* --main-bg: #222222; */
-    --main-bg: #ffffff;
+    --main-bg: #fef6ea;
     --txt-color: #161616;
     --light-txt: #222222d0;
     --secondary_txt: #ffffff;
 }
-
 
 html{
     scroll-behavior: smooth;
@@ -22,7 +22,11 @@ html{
     box-sizing: border-box;
 }
 
-
+.container {
+    display: grid;
+        grid-template-rows: 1fr auto;
+        /* min-height: 100vh; */
+}
 
 .material-symbols-outlined {
     color: #ffffff;
@@ -47,16 +51,20 @@ html{
 }
 
 body{
+    display: flex;
+        flex-direction: column;
     box-sizing: border-box;
     font-family: 'Varela Round';
     background: var(--main-bg);
     color: var(--txt-color);
     overflow-x: hidden;
     cursor: none;
+    min-height: 100vh;
+    margin: 0;
 }
 
 nav{
-    background-color: white;
+    background-color: #fef6ea;
     padding: 28px 6%;
     max-width: 1280px;
     display: flex;
@@ -70,7 +78,7 @@ nav{
     transform: translateX(-50%);
     box-sizing: border-box;
     transition: .2s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 32px 32px -32px rgba(0, 0, 0, 0.2);
         /* Add this line */
 }
 
@@ -285,11 +293,12 @@ section{
 
 
 .neonContainer{
-    /* margin: 10px auto; */
+    margin: 10px auto;
     color: #ffffff;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 10px;
     height: 0px;
 }
 
@@ -349,12 +358,14 @@ section{
     color: white;
     text-decoration: none;
         cursor: none;
+        padding: 20px;
 }
 
 .service-button:visited {
     color: white;
     text-decoration: none;
         cursor: none;
+        
 }
 
 .service-button:hover {
@@ -365,13 +376,23 @@ section{
 
 /* ----------------------- About -------------------- */
 
+.text-and-graph object {
+    width: auto;
+    height: 400px;
+    max-width: 1000px;
+}
+
 #about{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 20px;
     align-items: center;
-    margin-top: 50px;
+    padding: 0px 6% 20px 6%;
+}
+
+.about {
+    padding: 0px 6% 20px 6%;;
 }
 
 .aboutBox{
@@ -385,9 +406,11 @@ section{
 
 .aboutBox p{
     color: var(--light-txt);
-    margin: 12px 0;
-    line-height: 28px;
-    min-height: 100px;
+    text-align: center;
+    margin-top: 20px;
+}
+.about_txt p{
+    text-align: left;
 }
 
 .about_txt:nth-child(1){
@@ -456,22 +479,47 @@ section{
     transform: translateX(4px);
 }
 
+#what-we-do{
+    cursor: none;
+}
+
+#what-we-do h1 {
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+#what-we-do h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Remove underline from links */
+a {
+    text-decoration: none;
+    cursor: none;
+}
+
+/* Prevent color change after link is clicked */
+a:visited {
+    color: inherit;
+}
 
 /* --------------------- Services  */
 
 #services{
     position: relative;
+    padding: 50px 6% 20px 6%;
 }
 
 #services h1{
     font-weight: 500;
     font-size: 3rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .serviceContainer{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -483,6 +531,7 @@ section{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    cursor: none;
 }
 
 .serviceBox h2{
@@ -518,6 +567,7 @@ section{
     color: var(--txt-color);
     font-size: 18px;
     text-transform: uppercase;
+    cursor: none;
 }
 
 .serviceBox button span{
@@ -540,6 +590,14 @@ section{
     background: linear-gradient(0deg,var(--txt-color) 0%, #81551e 100%);
 }
 
+.serviceBox:nth-child(5) {
+    background: linear-gradient(0deg, var(--txt-color) 0%, #53504a 100%);
+}
+
+.serviceBox:nth-child(6) {
+    background: linear-gradient(0deg, var(--txt-color) 0%, #2d4d2d 100%);
+}
+
 /* // For Btns */
 .serviceBox:nth-child(1) .serviceBtn{
     background: #f5c227;
@@ -557,8 +615,33 @@ section{
     background: #81551e;
 }
 
+.serviceBox:nth-child(5) .serviceBtn {
+    background: #53504a;
+}
+
+.serviceBox:nth-child(6) .serviceBtn {
+    background: #2d4d2d;
+}
+
 
 /* --------------------- Testimonials */
+
+#team {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0px 6% 20px 6%;
+        margin-top: 0;
+    
+}
+
+.about-h1 {
+    padding-bottom: 10px;
+    font-weight: 500;
+        font-size: 3rem;
+}
 
 .testimonials h1{
     font-weight: 500;
@@ -569,7 +652,7 @@ section{
     max-width: 1120px;
     width: 100%;
     padding: 40px 0;
-    margin-top: 40px;
+    margin-top: 40px auto;
 }
 
 .slide-content{
@@ -581,7 +664,8 @@ section{
     cursor: none;
     border-radius: 10px;
     position: relative;
-    background: #e2e2e2c0;
+    border: 20px solid #81551e;
+    border-width: 2px;
     transition: background 0.5s ease-out;
     }
 
@@ -686,6 +770,7 @@ section{
 
 #contact{
     position: relative;
+    padding: 0;
 }
 
 #contact form{
@@ -721,7 +806,7 @@ section{
     position: absolute;
     inset: 2px;
     border: 2px solid var(--main-bg);
-    background: #ffffff;
+    background: #fef6ea;
     z-index: -1;
 }
 
@@ -736,6 +821,7 @@ section{
     max-width: 500px;
     margin: auto;
     margin-bottom: 10px;
+    padding: 20px;
 }
 
 #contact h1,
@@ -846,67 +932,11 @@ section{
     }
 }
 
-
-/* // Footer  */
-
-#footer{
-    display: flex;
-    flex-direction: column;
-    justify-content:start;
-    align-items: center;
-    padding: 50px 6% 20px 6%;;
-}
-
-#footer li{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-}
-
-
-
-#footer li a{
-    text-decoration: none;
-    color: var(--txt-color);
-    font-size: 18px;
-    cursor: none;
-}
-
-#footer li a:hover{
-    color: #f5c227;
-}
-
-#footer div input{
-    margin: 12px 0;
-    width: auto;
-    border: none;
-    outline: none;
-    padding: 12px 16px;
-    font-family: 'Poppins';
-    background: transparent;
-    color: white;
-    cursor: none;
-    border-bottom: 2px solid #f5c227;
-}
-
-#footer div button{
-    padding: 12px 16px;
-    border: none;
-    outline: none;
-    cursor: none;
-    font-family: 'Roboto';
-    font-size: 16px;
-    font-weight: 500;
-    background: #f5c227;
-}
-
 .logo {
     max-width: 600px;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .main-logo {
@@ -990,4 +1020,13 @@ section{
 @keyframes fadeOut {
     from { opacity: 1; }
     to { opacity: 0; }
+}
+
+
+
+
+footer{
+    margin-top: auto;
+        text-align: center;
+        padding: 1em;
 }

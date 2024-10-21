@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What We Do</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./source/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./media.css">
+    <style>
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px); 
+            opacity: 0; 
+    transition: opacity 0.5s ease; 
+    backdrop-filter: blur(10px); 
+        }
+    
+        .lightbox.show {
+            display: flex;
+            opacity: 1;
+        }
+    
+        .lightbox-content {
+            position: relative; /* Ensure the close button is positioned relative to the lightbox content */
+    background: #fef6ea;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 750px;
+    max-height: 90%;
+    overflow-y: auto;
+        }
+        .close-lightbox {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+}
+        
+    </style>
+</head>
+
+<body>
+<!-- Navigation Bar -->
+<nav id="navbar">
+    <div class="logo-container hoverElements">
+        <a class="hoverElements" onclick="handleNavul()" href="index.html"><img src="./assets/logo (2).jpg"
+                alt="OreSolve Logo" style="height: 50px;"></a>
+        <!-- <h1>OreSolve</h1> -->
+    </div>
+    <ul id="navul">
+        <li><a class="hoverElements" onclick="handleNavul()" href="index.html">Home</a></li>
+        <li><a class="hoverElements" onclick="handleNavul()" href="services.html">What We Do</a></li>
+        <li><a class="hoverElements" onclick="handleNavul()" href="about us.html">About Us</a></li>
+        <li><a class="hoverElements" onclick="handleNavul()" href="contact us.html">Contact Us</a></li>
+        <span class="material-symbols-outlined" id="closeMenu">
+            close
+        </span>
+    </ul>
+    <div id="humburger" class="hoverElements">
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+    <div class="container">
+        <!-- Cursor Fix-->
+    <section id="home">
+        <div class="parallaxDiv revealElements">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h1 class=" revealElements">Our Services</h1>
+        <div class="serviceContainer revealElements">
+            <div class="serviceBox">
+                <div>
+                    <h2>Project Management</h2>
+                    <p>Projects fuel change and growth in organisations. However, they frequently create a higher demand on
+                        available resources
+                        and management. Our project management support services aim to alleviate this challenge, ensuring
+                        the effective
+                        execution of projects while promoting improvement and expansion.</p>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined serviceBtn">
+                        inventory_2
+                    </span>
+                    <button class="explore" style="color: white;" onclick="openLightbox('lightboxProjectManagement')">
+                        Explore More <span class="material-symbols-outlined">
+                            trending_up
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="serviceBox">
+                <div>
+                    <h2>Health Systems Strengthening</h2>
+                    <p>Our efforts in health service delivery are focused on supporting front health workers,
+                        administrators, and health
+                        managers in the public and private sectors with tools, equipment, training, and information required
+                        to provide quality
+                        healthcare economically.</p>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined serviceBtn">
+                        lock
+                    </span>
+                    <button class="explore" style="color: white;" onclick="openLightbox('lightboxHealthSystems')">
+                        Explore More <span class="material-symbols-outlined">
+                            trending_up
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="serviceBox">
+                <div>
+                    <h2>Systems Development and ICT Support</h2>
+                    <p>Implementing and supporting technologies that enable organizations to deliver on their mandate is how
+                        we help them
+                        evolve with a competitive advantage.</p>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined serviceBtn">
+                        public
+                    </span>
+                    <button class="explore" style="color: white;" onclick="openLightbox('lightboxSystemsDevelopment')">
+                        Explore More <span class="material-symbols-outlined">
+                            trending_up
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="serviceBox">
+                <div>
+                    <h2>Operational Support</h2>
+                    <p>Our operational support services can take care of you accounting, human resources and payroll
+                        administration so that you
+                        can focus on your core business and mission.</p>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined serviceBtn">
+                        payments
+                    </span>
+                    <button class="explore" style="color: white;" onclick="openLightbox('lightboxOperationalSupport')">
+                        Explore More <span class="material-symbols-outlined">
+                            trending_up
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightboxProjectManagement">
+        <div class="lightbox-content">
+            <span class="close-lightbox hoverElements" onclick="closeLightbox('lightboxProjectManagement')"
+                style="font-size: 3em; padding-left: 10px; padding-left: 10px; top: 0;">
+                &times;
+            </span>
+            <h2 style="padding-top: 20px; padding-bottom: 20px; padding-right: 20px;">Services include:</h2>
+            <ul>
+                <li style="padding: 5px;">Charting our skilled project managers to take the responsibility of managing your
+                    projects while your organisation’s
+                    technical experts work as part of the project team to execute well-coordinated activities.</li>
+                <li style="padding: 5px;">Committing our experts and partners to execute the implementation of your project
+                    from A to Z, to achieve the objectives
+                    on your behalf and manage the transition to your support, who will sustain the positive change.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="lightbox" id="lightboxHealthSystems">
+        <div class="lightbox-content">
+            <span class="close-lightbox hoverElements" onclick="closeLightbox('lightboxHealthSystems')"
+                style="font-size: 3em; padding-left: 10px; padding-left: 10px; top: 0;">
+                &times;
+            </span>
+            <h2 style="padding-top: 20px; padding-bottom: 20px; padding-right: 20px;">Services include:</h2>
+            <ul>
+                <li style="padding: 5px;">Hospital, General Medical Practice Management Systems
+                    <ul style="padding-left: 20px;">
+                        <li style="padding-top: 10px;">Including the implementation and support of Electronic Medical Records</li>
+                    </ul>
+                </li>
+                <li style="padding: 5px;">Pharmaceutical Management Systems</li>
+                <li style="padding: 5px;">Patient treatment process design</li>
+                <li style="padding: 5px;">Data collection and reporting tools</li>
+                <li style="padding: 5px;">Digital health tools training</li>
+                <li style="padding: 5px;">Smart medical devices</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="lightbox" id="lightboxSystemsDevelopment">
+        <div class="lightbox-content">
+            <span class="close-lightbox hoverElements" onclick="closeLightbox('lightboxSystemsDevelopment')"
+                style="font-size: 3em; padding-left: 10px; padding-left: 10px; top: 0;">
+                &times;
+            </span>
+            <h2 style="padding-top: 20px; padding-bottom: 20px; padding-right: 20px;">Services include:
+            </h2>
+            <ul>
+                <li style="padding: 5px;">Software Development</li>
+                <li style="padding: 5px;">Business/user requirements, elicitation, drafting and management</li>
+                <li style="padding: 5px;">Systems Analysis (including system testing, assessment, and evaluation)</li>
+                <li style="padding: 5px;">Solutions sourcing</li>
+                <li style="padding: 5px;">Systems implementation, including roll-out and user training</li>
+                <li style="padding: 5px;">Service\Helpdesk remote and on-site technical support</li>
+                <li style="padding: 5px;">Information and Communication equipment specification and procurement.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="lightbox" id="lightboxOperationalSupport">
+        <div class="lightbox-content">
+            <span class="close-lightbox hoverElements" onclick="closeLightbox('lightboxOperationalSupport')"
+                style="font-size: 3em; padding-left: 10px; padding-left: 10px; top: 0;">
+                &times;
+            </span>
+            <h2 style="padding-top: 20px; padding-bottom: 20px; padding-right: 20px;">Services include:</h2>
+            <ul>
+                <p><strong>Accounting and Administration</strong></p>
+                <ul style="padding-left: 30px;">
+                <li style="padding-top: 5px;padding-bottom: 5px;">Bookkeeping</li>
+                <li style="padding-top: 5px;padding-bottom: 5px;">Payment facilitation and management</li>
+                <li style="padding-top: 5px;padding-bottom: 5px;">Monthly financial report preparations</li>
+                <li style="padding-top: 5px;padding-bottom: 5px;">Tax and VAT Administration</li>
+                <li style="padding-top: 5px;padding-bottom: 5px;">Procurement, including import and export of goods</li>
+                <li style="padding-top: 5px;padding-bottom: 5px;">Contract and compliance management</li>
+                <li style="padding-top: 5px;padding-bottom: 5px;">Human Resources and Payroll</li>
+                </ul>
+                <p><strong>Recruitment</strong></p>
+                <ul style="padding-left: 30px;">
+                <li style="padding-top: 5px;padding-bottom: 5px;">Employment contract management</li>
+                <li style="padding-top: 5px;padding-bottom: 5px;">HR conditions of service provision management</li>
+                <li style="padding-top: 5px;padding-bottom: 5px;">HR records keeping and leave management</li>
+                <li style="padding-top: 5px;padding-bottom: 5px;">Payroll Administration</li>
+                <li style="padding-top: 5px;padding-bottom: 5px;">Performance Management</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer >
+        <p><strong>Oresolve Consulting and Technologies (Pty) Ltd.</strong></p>
+        <p>12 Adler Street, Windhoek West, Windhoek, Namibia</p>
+        <p>+264 857887233 / +264 811499052</p>
+        <p><strong>Operational Support:</strong> info@oresolvect.com</p>
+        <p><strong>Technical Support:</strong> support@oresolvect.com</p>
+    </footer>
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Scripts -->
+    <script src="./script.js"></script>
+    
+</body>
+</html>

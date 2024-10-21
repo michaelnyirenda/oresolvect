@@ -110,19 +110,6 @@ const textTypingEffect = (element, text, i = 0, isSecondParagraph = false) => {
 
 document.addEventListener('DOMContentLoaded', function () {
     let windowHeight = window.innerHeight;
-    let aboutParaReveal = about_p.getBoundingClientRect().top;
-    let aboutParaRevealPoint = 140;
-
-    // if (aboutParaReveal < windowHeight - aboutParaRevealPoint) {
-    //     if (!typed) {
-    //         typed = true;
-    //         const firstParagraph = "OreSolve partners with individuals, communities, organisations, and governments to identify and pursue opportunities for improvement, innovation, and development.";
-    //         const secondParagraph = "We support organisations' operations, enable better decision-making, and provide project management services for implementing sustainable solutions in an ever-changing world.";
-    //         textTypingEffect(about_p, firstParagraph, 0, false);
-    //         setTimeout(() => textTypingEffect(about_p, secondParagraph, 0, true), firstParagraph.length * 20 + 500); // Adding a delay before starting the second paragraph
-    //     }
-    // }
-
     window.addEventListener('scroll', function () {
         const scrollY = window.scrollY;
 
@@ -180,7 +167,7 @@ var swiper = new Swiper(".slide-content", {
         prevEl: ".swiper-button-prev",
     },
     autoplay: {
-        delay: 3000, // 2 seconds
+        delay: 2000, // 2 seconds
         disableOnInteraction: false,
     },
     breakpoints: {
@@ -279,4 +266,40 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         isPurposeVisible = !isPurposeVisible;
     }, 5000); // Change every 3 seconds
+});
+
+function openLightbox(id) {
+    const lightbox = document.getElementById(id);
+    lightbox.style.display = 'flex';
+    setTimeout(() => {
+        lightbox.classList.add('show');
+    }, 10); // Slight delay to trigger the transition
+}
+
+function closeLightbox(id) {
+    const lightbox = document.getElementById(id);
+    lightbox.classList.remove('show');
+    setTimeout(() => {
+        lightbox.style.display = 'none';
+    }, 500); // Match the duration of the fade-out transition
+}
+
+// Ensure all lightboxes are hidden when the page loads
+document.addEventListener('DOMContentLoaded', function () {
+    const lightboxes = document.querySelectorAll('.lightbox');
+    lightboxes.forEach(lightbox => {
+        lightbox.style.display = 'none';
+    });
+});
+
+// Close lightbox when clicking outside of the lightbox content
+document.addEventListener('DOMContentLoaded', function () {
+    const lightboxes = document.querySelectorAll('.lightbox');
+    lightboxes.forEach(lightbox => {
+        lightbox.addEventListener('click', function (event) {
+            if (event.target === lightbox) {
+                closeLightbox(lightbox.id);
+            }
+        });
+    });
 });
