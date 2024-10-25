@@ -7,9 +7,6 @@
     <title>OreSolve</title>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./source/swiper-bundle.min.css">
@@ -20,8 +17,8 @@
     <!-- Navigation Bar -->
     <nav id="navbar">
         <div class="logo-container hoverElements">
-            <a class="hoverElements" onclick="handleNavul()" href="index.html"><img src="./assets/logo (2).jpg" alt="OreSolve Logo" style="height: 50px;"></a>
-            <!-- <h1>OreSolve</h1> -->
+            <a class="hoverElements" onclick="handleNavul()" href="index.html"><img src="./assets/logo (2).jpg"
+                    alt="OreSolve Logo" style="height: 50px;"></a>
         </div>
         <ul id="navul">
             <li><a class="hoverElements" onclick="handleNavul()" href="index.html">Home</a></li>
@@ -38,18 +35,16 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="header" style="margin-top: 0px; margin-bottom: 150px;">
-        <div class="parallaxDiv revealElements">
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" style="margin-top: 0;">
+    <!-- Content -->
+    <div class="content index-content">
+    <section id="about">
+        <h1 style="font-size: 2.5em; grid-column: span 2;">With you, we can always find a way forward to <span style="color: #6d8a13;">support and optimise
+                operations.</span></h1>
         <div class="aboutBox about_txt revealElements">
-            <h1>With you, we can always find a way forward to <span style="color: #6d8a13;">support and optimise operations.</span></h1>
-            <p id="about_p">
-                OreSolve partners with individuals, communities, organisations, and governments to identify and pursue opportunities for
+    
+            <p id="about_p" style="line-height:30px">
+                OreSolve partners with individuals, communities, organisations, and governments to identify and pursue
+                opportunities for
                 improvement, innovation, and development.
                 <br><br>
                 We support and bring efficiency to business operations and health programs in the following
@@ -60,17 +55,17 @@
                 <ul>
                     <li class="revealElements">
                         <a class="hoverElements" href="services.html">
-                            <span class="material-symbols-outlined">north_east</span> Project Management
+                            <span class="material-symbols-outlined">north_east</span>Project Management
                         </a>
                     </li>
                     <li class="revealElements">
                         <a class="hoverElements" href="services.html">
-                            <span class="material-symbols-outlined">north_east</span> Health Information Strengthening
+                            <span class="material-symbols-outlined">north_east</span>Health Information Strengthening
                         </a>
                     </li>
                     <li class="revealElements">
                         <a class="hoverElements" href="services.html">
-                            <span class="material-symbols-outlined">north_east</span> Research, Monitoring and Evaluation
+                            <span class="material-symbols-outlined">north_east</span>Research, Monitoring and Evaluation
                         </a>
                     </li>
                     <li class="revealElements">
@@ -82,55 +77,84 @@
                     </li>
                     <li class="revealElements">
                         <a class="hoverElements" href="services.html">
-                            <span class="material-symbols-outlined">north_east</span> Systems Development and ICT Support
+                            <span class="material-symbols-outlined">north_east</span>Systems Development and ICT Support
                         </a>
                     </li>
                     <li class="revealElements">
                         <a class="hoverElements" href="services.html">
-                            <span class="material-symbols-outlined">north_east</span> Accounting and Administration
+                            <span class="material-symbols-outlined">north_east</span>Accounting and Administration
                         </a>
                     </li>
-                    <li class="hoverElements" class="revealElements">
-                        <a href="services.html">
-                            <span class="material-symbols-outlined">north_east</span> Human Resources and Payroll
+                    <li class="revealElements">
+                        <a class="hoverElements" href="services.html">
+                            <span class="material-symbols-outlined">north_east</span>Human Resources and Payroll
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="aboutBox aboutImgBox hoverElements revealElements">
-            <div class="text-and-graph">            
+        <div class="aboutImgBox hoverElements revealElements">
+            <div class="text-and-graph">
                 <object data="./assets/Graph-Anim.svg" type="image/svg+xml" id="animatedGraph"></object>
-                <p><strong>Survey and Data Analytics Services Provider</strong></p>
+                <p style="text-align: center; margin-top: -30px;"><strong>Survey and Data Analytics Services Provider</strong></p>
             </div>
         </div>
     </section>
-    
-    <!-- Footer Section -->
+
+    <!-- Neon Containers -->
+    <section class="neonContainer">
+        <a href="services.html">
+            <div class="neon_div hoverElements revealElements">
+                <h1 style="color: white;">Project Management Support</h1>
+                <span class="material-symbols-outlined" style="color: white;">
+                    north_east
+                </span>
+            </div>
+        </a>
+        <a href="services.html">
+            <div class="neon_div hoverElements revealElements">
+                <h1 style="color: white;">Health Systems Strengthening</h1>
+                <span class="material-symbols-outlined" style="color: white;">
+                    north_east
+                </span>
+            </div>
+        </a>
+        <a href="services.html">
+            <div class="neon_div hoverElements revealElements">
+                <h1 style="color: white;">Systems Development and ICT Support</h1>
+                <span class="material-symbols-outlined" style="color: white;">
+                    north_east
+                </span>
+            </div>
+        </a>
+        <a href="services.html">
+            <div class="neon_div hoverElements revealElements">
+                <h1 style="color: white;">Business Operational Support</h1>
+                <span class="material-symbols-outlined" style="color: white;">
+                    north_east
+                </span>
+            </div>
+        </a>
+    </section>
+
+</div>
     <footer>
-        <p><strong>Oresolve Consulting and Technologies (Pty) Ltd.</strong></p>
+        <P>© OreSolve Consulting & Technologies (Pty) Ltd.</P>
         <p>12 Adler Street, Windhoek West, Windhoek, Namibia</p>
-        <p>+264 857887233 / +264 811499052</p>
-        <p><strong>Operational Support:</strong> info@oresolvect.com</p>
-        <p><strong>Technical Support:</strong> support@oresolvect.com</p>
+        <p><strong>Phone:</strong> +264 857887233 / +264 811499052</p>
     </footer>
+    <div class="cursor"></div>
 
-    <!-- Cursor -->
-    <div class="cursor"></div> 
 
-    <!-- Alert Box -->
     <div class="alertBox" id="alertBox">
         <p id="alertMessage"></p>
     </div>
-
-    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./source/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-    <script type="text/javascript">
-        emailjs.init('I9fDSX9Uze4ThzrbL')
-    </script>
     <script src="./script.js"></script>
+    <script src="./chart.js"></script>
 </body>
 
 </html>

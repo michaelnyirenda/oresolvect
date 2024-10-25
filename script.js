@@ -1,126 +1,121 @@
 const parllaxDiv = document.querySelector('.parallaxDiv');
-const images = parllaxDiv.querySelectorAll('img');
+const images = parllaxDiv ? parllaxDiv.querySelectorAll('img') : [];
 
 const hoverELements = document.querySelectorAll('.hoverElements');
 
-hoverELements.forEach((elem)=>{
-    elem.addEventListener('mouseover',()=>{
-        cursor.classList.add('active');
-    })
-    elem.addEventListener('mouseleave',()=>{
-        cursor.classList.remove('active')
-    })
-})
+hoverELements.forEach((elem) => {
+    elem.addEventListener('mouseover', () => {
+        if (cursor) cursor.classList.add('active');
+    });
+    elem.addEventListener('mouseleave', () => {
+        if (cursor) cursor.classList.remove('active');
+    });
+});
 
-
-
-//For Reveal 
+// For Reveal 
 const revealElements = document.querySelectorAll('.revealElements');
 
-const revealOnScroll = ()=>{
+const revealOnScroll = () => {
     const windowHeight = window.innerHeight;
 
-    revealElements.forEach((elem)=>{
+    revealElements.forEach((elem) => {
         const elementTop = elem.getBoundingClientRect().top;
         const revealPoint = 100;
 
         if (elementTop < windowHeight - revealPoint) {
             elem.classList.add('active');
-        }else{
+        } else {
             elem.classList.remove('active');
         }
-    })
+    });
 }
 
+revealOnScroll();
 
-revealOnScroll()
+// Call revealOnScroll on page load
+document.addEventListener('DOMContentLoaded', revealOnScroll);
 
-const isTouchDevice = ()=>{
-    return 'ontouchstart' in window || navigator.maxTouchPoints > 0
+// Call revealOnScroll on scroll
+window.addEventListener('scroll', revealOnScroll);
+
+const isTouchDevice = () => {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 }
 
-//Cursor
+// Cursor
 const cursor = document.querySelector('.cursor');
 
 function updateCursorPositions(e) {
-     cursor.style.left = `${e.clientX - 4}px`    
-     cursor.style.top = `${e.clientY - 4}px`    
+    if (cursor) {
+        cursor.style.left = `${e.clientX - 4}px`;
+        cursor.style.top = `${e.clientY - 4}px`;
+    }
 }
 
-
-const handleMouseEvents = (e)=>{
+const handleMouseEvents = (e) => {
     let speed;
 
     if (isTouchDevice()) {
         speed = 0.2;
-    }else{
-        speed = 1.4
+    } else {
+        speed = 1.4;
     }
 
-    images.forEach((image,index)=>{
-        const x = (window.innerWidth - e.pageX * speed * (index % 2 === 0? -1: 1)) / 100;
-        const y = (window.innerHeight - e.pageY * speed * (index % 2 === 0? -1: 1)) / 100;
+    images.forEach((image, index) => {
+        const x = (window.innerWidth - e.pageX * speed * (index % 2 === 0 ? -1 : 1)) / 100;
+        const y = (window.innerHeight - e.pageY * speed * (index % 2 === 0 ? -1 : 1)) / 100;
 
         image.style.transform = `translate(${x}px,${y}px)`;
-    })
+    });
 
-    updateCursorPositions(e)
+    updateCursorPositions(e);
 }
 
+document.addEventListener('mousedown', () => {
+    if (cursor) cursor.classList.add('active');
+});
 
-document.addEventListener('mousedown',()=>{
-    cursor.classList.add('active');
-})
+document.addEventListener('mouseup', () => {
+    if (cursor) cursor.classList.remove('active');
+});
 
-document.addEventListener('mouseup',()=>{
-    cursor.classList.remove('active');
-})
-
-
-
-//For Parallax Effect
-document.addEventListener('mousemove',handleMouseEvents);
-
-
+// For Parallax Effect
+document.addEventListener('mousemove', handleMouseEvents);
 
 const navbar = document.getElementById('navbar');
 const nextHero = document.getElementById('nextHero');
-const about_p = this.document.getElementById('about_p');
-const animatedGraph = this.document.getElementById('animatedGraph');
+const about_p = document.getElementById('about_p');
+const animatedGraph = document.getElementById('animatedGraph');
 let typed = false;
 
-
-const textTypingEffect = (element, text, i = 0, isSecondParagraph = false) => {
+const textTypingEffect = (element, text, i = 0) => {
     if (!typed) {
         return;
     }
 
-    if (isSecondParagraph && i === 0) {
-        element.innerHTML += `<br><br>`;
-    }
-
-    element.innerHTML += text[i];
+    element.textContent += text[i];
 
     if (i === text.length - 1) {
         return;
     }
 
-    setTimeout(() => textTypingEffect(element, text, i + 1, isSecondParagraph), 20);
-};
+    setTimeout(() => textTypingEffect(element, text, i + 1), 20);
+}
 
-document.addEventListener('DOMContentLoaded', function () {
-    let windowHeight = window.innerHeight;
-    window.addEventListener('scroll', function () {
-        const scrollY = window.scrollY;
+window.addEventListener('scroll', function () {
+    const scrollY = window.scrollY;
 
+    if (nextHero) {
         nextHero.style.transform = `translateX(${-(scrollY / 4)}px)`;
+    }
 
-        if (scrollY > 0) {
-            navbar.classList.add('active');
-        } else {
-            navbar.classList.remove('active');
-        }
+    if (scrollY > 100) {
+        if (navbar) navbar.classList.add('active');
+    } else {
+        if (navbar) navbar.classList.remove('active');
+    }
 
+    if (animatedGraph) {
         let animatedGraphReveal = animatedGraph.getBoundingClientRect().top;
         let animatedGraphRevealPoint = 100;
 
@@ -133,23 +128,45 @@ document.addEventListener('DOMContentLoaded', function () {
             animatedGraph.classList.remove('active');
             animatedGraph.setAttribute('data', '');
         }
+    }
 
-        revealOnScroll();
+    revealOnScroll();
+});
+
+// For Data
+function countup(element, start, end, duration) {
+    let startTime = null;
+    const step = (timestamp) => {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+
+        element.textContent = Math.floor(progress * (end - start) + start).toLocaleString();
+
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        }
+    };
+    requestAnimationFrame(step);
+}
+
+const counter = document.getElementById('counter');
+
+if (counter) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                counter.classList.add('visible');
+                countup(counter, 0, 4345256, 2000);
+            }
+        });
+    }, {
+        threshold: 0.5
     });
-});
 
-// For Swiper 
+    observer.observe(counter);
+}
 
-var swiper = new Swiper(".slide-content", {
-    slidesPerView: 3,
-    spaceBetween: 25,
-    loop: true,
-    centerSlide: 'true',
-});
-
-
-// For Swiper 
-
+// For Swiper
 var swiper = new Swiper(".slide-content", {
     slidesPerView: 3,
     spaceBetween: 25,
@@ -183,91 +200,61 @@ var swiper = new Swiper(".slide-content", {
     },
 });
 
-
-//For Contact Us 
-
-
-//Alert
-const throwAlert = (message)=>{
+// For Contact Us
+// Alert
+const throwAlert = (message) => {
     const alertBox = document.getElementById('alertBox');
     document.getElementById('alertMessage').innerText = message;
     if (alertBox.classList.contains('animAlert')) {
         return
     }
     alertBox.classList.add('animAlert');
-    setTimeout(()=>{
+    setTimeout(() => {
         alertBox.classList.remove('animAlert')
-    },3000)
+    }, 3000)
 }
 
 const contactForm = document.getElementById('contactForm');
 
 
-const sendEmail = (e)=>{
+const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_q4xubng','template_wiveeyh','#contactForm')
-    .then(()=>{
-        throwAlert('Message Sent Successfully ✅')
-        contactForm.reset();
-    },()=>{
-        throwAlert('Message Not Sent (Server Error) ❌')
-    })
+    emailjs.sendForm('service_q4xubng', 'template_wiveeyh', '#contactForm')
+        .then(() => {
+            throwAlert('Message Sent Successfully ✅')
+            contactForm.reset();
+        }, () => {
+            throwAlert('Message Not Sent (Server Error) ❌')
+        })
 }
 
-contactForm.addEventListener('submit',sendEmail);
+contactForm.addEventListener('submit', sendEmail);
 
-
-// For Navbar 
-
+// For Navbar
 const navul = document.getElementById('navul');
 const closeMenu = document.getElementById('closeMenu');
 const humburger = document.getElementById('humburger');
 
-humburger.addEventListener('click',()=>{
-    navul.classList.add('activated');
-})
-
-closeMenu.addEventListener('click',()=>{
-    navul.classList.remove('activated');
-})
-
-const handleNavul = ()=>{
-    closeMenu.click();
+if (humburger) {
+    humburger.addEventListener('click', () => {
+        if (navul) navul.classList.add('activated');
+    });
 }
 
+if (closeMenu) {
+    closeMenu.addEventListener('click', () => {
+        if (navul) navul.classList.remove('activated');
+    });
+}
 
-// For Home
+const handleNavul = () => {
+    if (closeMenu) {
+        closeMenu.click();
+    }
+}
 
-document.addEventListener('DOMContentLoaded', function() {
-    const purposeContainer = document.getElementById('purpose-container');
-    const missionContainer = document.getElementById('mission-container');
-    let isPurposeVisible = true;
-
-    setInterval(() => {
-        if (isPurposeVisible) {
-            purposeContainer.classList.remove('fade-in');
-            purposeContainer.classList.add('fade-out');
-            missionContainer.classList.remove('fade-out');
-            missionContainer.classList.add('fade-in');
-            setTimeout(() => {
-                purposeContainer.style.display = 'none';
-                missionContainer.style.display = 'block';
-            }, 1000); // Match the duration of the fade-out animation
-        } else {
-            missionContainer.classList.remove('fade-in');
-            missionContainer.classList.add('fade-out');
-            purposeContainer.classList.remove('fade-out');
-            purposeContainer.classList.add('fade-in');
-            setTimeout(() => {
-                missionContainer.style.display = 'none';
-                purposeContainer.style.display = 'block';
-            }, 1000); // Match the duration of the fade-out animation
-        }
-        isPurposeVisible = !isPurposeVisible;
-    }, 5000); // Change every 3 seconds
-});
-
+// For Lightbox
 function openLightbox(id) {
     const lightbox = document.getElementById(id);
     lightbox.style.display = 'flex';

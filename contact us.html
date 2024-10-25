@@ -4,17 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OreSolve</title>
+    <title>Contact Us</title>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./source/swiper-bundle.min.css">
     <link rel="stylesheet" href="./media.css">
-    
 </head>
 
 <body>
@@ -23,7 +19,6 @@
         <div class="logo-container hoverElements">
             <a class="hoverElements" onclick="handleNavul()" href="index.html"><img src="./assets/logo (2).jpg"
                     alt="OreSolve Logo" style="height: 50px;"></a>
-            <!-- <h1>OreSolve</h1> -->
         </div>
         <ul id="navul">
             <li><a class="hoverElements" onclick="handleNavul()" href="index.html">Home</a></li>
@@ -40,71 +35,51 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="header" style="margin-bottom: 150px; margin-top: 0;">
-        <div class="parallaxDiv revealElements">
-            <!-- <img src="./assets/Main Logo.png" alt="Logo" class="main-logo"> -->
-            <!-- <img src="./assets/home_4.png" alt="Parallax" class="ParallaxImgs">
-            <img src="./assets/home_3.png" alt="Parallax" class="ParallaxImgs">
-            <img src="./assets/home_2.png" alt="Parallax" class="ParallaxImgs">
-            <img src="./assets/home_1.png" alt="Parallax" class="ParallaxImgs"> -->
+    <!-- ------------------ Home  -->
+<div class="content contact-container">
+    <section id="contact">
+        <h1 class="revealElements">Contact Us</h1>
+        <p class="revealElements">We're here to help you with any questions or support you need. Reach out to us and we'll respond as soon as
+            possible.</p>
+            <p><strong>Phone:</strong> +264 857887233 / +264 811499052</p>
+        <div class="contactDiv revealElements">
+            <form id="contactForm">
+                <h2>Send Message</h2>
+                <div class="inputBox hoverElements">
+                    <input type="text" required name="user_name">
+                    <span>Your Name</span>
+                </div>
+                <div class="inputBox hoverElements">
+                    <input type="text" required name="user_email">
+                    <span>Email Address</span>
+                </div>
+                <div class="inputBox message hoverElements">
+                    <textarea class="message" name="user_message" id="message"></textarea>
+                    <span>Your Message</span>
+                </div>
+                <input type="submit" class="hoverElements" value="Submit">
+            </form>
         </div>
     </section>
+</div>
 
-    <div style="display: flex; flex-direction: row; max-width: 1280px; margin: 0 auto;">
-        <!-- Contact Section -->
-        <section id="contact">
-            <h1 class="revealElements">Contact Us</h1>
-            <p class="revealElements">We're here to help you with any questions or support you need. Reach out to us and
-                we'll respond as soon as
-                possible.</p>
-            <div class="contactDiv revealElements">
-                <form id="contactForm">
-                    <h2>Send Message</h2>
-                    <div class="inputBox hoverElements">
-                        <input type="text" required name="user_name">
-                        <span>Your Name</span>
-                    </div>
-                    <div class="inputBox hoverElements">
-                        <input type="text" required name="user_email">
-                        <span>Email Address</span>
-                    </div>
-                    <div class="inputBox hoverElements">
-                        <textarea name="user_message" id="message"></textarea>
-                        <span>Your Message</span>
-                    </div>
-                    <input type="submit" class="hoverElements" value="Submit">
-                </form>
-            </div>
-        </section>
-
-    </div>
-
-    <!-- Footer Section -->
-    <footer>
-        <p><strong>Oresolve Consulting and Technologies (Pty) Ltd.</strong></p>
-        <p>12 Adler Street, Windhoek West, Windhoek, Namibia</p>
-        <p>+264 857887233 / +264 811499052</p>
-        <p><strong>Operational Support:</strong> info@oresolvect.com</p>
-        <p><strong>Technical Support:</strong> support@oresolvect.com</p>
-    </footer>
-
-    <!-- Cursor -->
+<footer>
+    <P>© OreSolve Consulting & Technologies (Pty) Ltd.</P>
+    <p>12 Adler Street, Windhoek West, Windhoek, Namibia</p>
+    <p><strong>Phone:</strong> +264 857887233 / +264 811499052</p>
+</footer>
     <div class="cursor"></div>
 
-    <!-- Alert Box -->
+
     <div class="alertBox" id="alertBox">
         <p id="alertMessage"></p>
     </div>
-
-    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./source/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-    <script type="text/javascript">
-        emailjs.init('I9fDSX9Uze4ThzrbL')
-    </script>
     <script src="./script.js"></script>
+    <script src="./chart.js"></script>
 </body>
 
 </html>
