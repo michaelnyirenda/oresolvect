@@ -806,13 +806,6 @@ section{
 
 /* ------------------------- Contact  */
 
-/* .contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-} */
-
 #contact {
     position: relative;
 }
@@ -904,11 +897,6 @@ section{
     transition: .5s;
     font-family: 'Varela Round';
 }
-
-.message {
-    height: 150px;
-}
-
 .inputBox input:valid ~ span,
 .inputBox input:focus ~ span,
 .inputBox textarea:user-valid ~ span,
@@ -943,6 +931,9 @@ section{
     background: linear-gradient(#fff2,rgba(112,60,60,.2));
 }
 
+.message {
+    height: 150px;
+}
 /* //Animation to Alert  */
 
 .alertBox{

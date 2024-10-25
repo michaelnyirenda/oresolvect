@@ -206,28 +206,28 @@ const throwAlert = (message) => {
     const alertBox = document.getElementById('alertBox');
     document.getElementById('alertMessage').innerText = message;
     if (alertBox.classList.contains('animAlert')) {
-        return
+        return;
     }
     alertBox.classList.add('animAlert');
     setTimeout(() => {
-        alertBox.classList.remove('animAlert')
-    }, 3000)
-}
+        alertBox.classList.remove('animAlert');
+    }, 3000);
+};
 
 const contactForm = document.getElementById('contactForm');
-
 
 const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_q4xubng', 'template_wiveeyh', '#contactForm')
+    emailjs.sendForm('service_0ytqdmr', 'template_edcsbtq', '#contactForm', 'UtOmtLGsUeEVuhAip')
         .then(() => {
-            throwAlert('Message Sent Successfully ✅')
+            throwAlert('Message Sent Successfully ✅');
             contactForm.reset();
-        }, () => {
-            throwAlert('Message Not Sent (Server Error) ❌')
-        })
-}
+        }, (error) => {
+            console.error('EmailJS Error:', error);
+            throwAlert('Message Not Sent (Server Error) ❌');
+        });
+};
 
 contactForm.addEventListener('submit', sendEmail);
 
