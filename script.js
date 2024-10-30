@@ -219,7 +219,7 @@ const contactForm = document.getElementById('contactForm');
 const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_0ytqdmr', 'template_edcsbtq', '#contactForm', 'UtOmtLGsUeEVuhAip')
+    emailjs.sendForm('service_3log869', 'template_edcsbtq', '#contactForm', 'UtOmtLGsUeEVuhAip')
         .then(() => {
             throwAlert('Message Sent Successfully ✅');
             contactForm.reset();
